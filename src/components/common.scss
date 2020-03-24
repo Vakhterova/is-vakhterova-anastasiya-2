@@ -68,65 +68,58 @@ html {
 }
 
 /* порядок страниц */
-
-.page-change {
+.pages-block {
   display: flex;
   justify-content: space-between;
-  background-color: white;
-  border: none;
-  padding: 0px;
-  padding: 0;
-  border: none;
+  margin-bottom: 48px;
 }
 
-.change-next {
+.page-change_next {
   background-image: url(/static/images/next1.png);
   width: 18px;
   height: 30px;
+  background-color: #fff;
+  border: none;
+
+  &:hover,&:focus {
+    background-image: url(/static/images/next2.png);
+    cursor: pointer;
+  }
+
+  &:active {
+    background-image: url(/static/images/next3.png);
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
-.change-next:hover,.change-next:focus {
-  background-image: url(/static/images/next2.png);
-  cursor: pointer;
-}
-
-.change-next:active {
-  background-image: url(/static/images/next3.png);
-}
-
-.change-next:focus {
-  outline: none;
-}
-
-.change-back {
+.page-change_back {
   background-image: url(/static/images/next1.png);
   width: 18px;
   height: 30px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
-}
+  background-color: #fff;
+  border: none;
 
-.change-back:hover,.change-back:focus {
-  background-image: url(/static/images/next2.png);
-  cursor: pointer;
-}
-
-.change-back:active {
-  background-image: url(/static/images/next3.png);
-}
-
-.change-back:focus {
-  outline: none;
+  &:hover,&:focus {
+    background-image: url(/static/images/next2.png);
+    cursor: pointer;
+  }
+  
+  &:active {
+    background-image: url(/static/images/next3.png);
+  }
+  
+  &:focus {
+    outline: none;
+  }
 }
 
 .pagination {
   display: flex;
   margin-left: 64px;
-}
-
-.page-block {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 48px;
 }
 
 .pages {
@@ -138,7 +131,7 @@ html {
   margin-right: 65px;
 }
 
-.page {
+.page-item {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -146,19 +139,20 @@ html {
   line-height: 20px;
   text-transform: uppercase;
   color: #1e0606;
+
+  &:hover, &:focus {
+    opacity: 0.5;
+  }
+  
+  &:focus {
+    outline: none;
+  }
 }
 
 .current {
   color: #c29974;
 }
 
-.page:hover, .page:focus {
-  opacity: 0.5;
-}
-
-.page:focus {
-  outline: none;
-}
 
 /*form */
 
@@ -254,3 +248,5 @@ html {
 @import "./footer/footer";
 @import "./button/button";
 @import "./link/link";
+@import "./card-category/card-category";
+@import "./card-blog/card-blog";

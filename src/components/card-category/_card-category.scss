@@ -1,0 +1,60 @@
+.card-category {
+  width: 280px;
+  padding-right: 10px;
+  position: relative;
+
+  &__item {
+    width: 280px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  &__text {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    top: 133px;
+    left: 140px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.card-category__link:hover .card-category__text, .card-category__link:focus .card-category__text {
+  text-decoration-line: underline;
+  pointer-events: visible;
+  cursor: pointer;
+}
+
+.card-category__link:focus {
+  outline: none;
+}
+
+.category__link:active .category__text {
+  text-decoration-line: underline;
+  pointer-events: visible;
+}
+
+.background-first{
+  background-color: #DBE4DB;
+}
+
+.background-second {
+  background-color: rgba(186, 142, 107, 0.3);
+}
+
+.background-third {
+  background-color: #F8F2DA;;
+}
+
+.background-fourth{
+  background-color:  rgba(9, 3, 79, 0.17);
+}

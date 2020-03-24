@@ -12,92 +12,87 @@
   </head>
   <body>
     @@include('header/index.html')
-    <main class="category">
+    <main class="main-page">
       <h1 class="visually-hidden"> Main DLK's page. Main category products. Delivery. Contact. </h1>
       <section class="poster">
         <h2 class="visually-hidden"> Slider with the most popular DLK's products </h2>
         <div class="container">
-          <div class="slider-popular"> 
-            <div class="poster-title"> THE OOH NOO COLLECTION </div>
-            <div class="poster-text"> Designed in Slovenia </div>
-            <div class="poster-page"> 01 </div>
-            <div class="poster-buttons">
-              <button class="poster-button active-block"> </button>
-              <button class="poster-button"> </button>
-              <button class="poster-button"> </button>
-              <button class="poster-button"> </button>
+          <div class="poster__slider"> 
+            <div class="poster__title"> THE OOH NOO COLLECTION </div>
+            <div class="poster__text"> Designed in Slovenia </div>
+            <div class="poster__page"> 01 </div>
+            <div class="poster__buttons">
+              <button class="poster__button active-block"> </button>
+              <button class="poster__button"> </button>
+              <button class="poster__button"> </button>
+              <button class="poster__button"> </button>
             </div>
             @@include('button/index.html',{
               "text": "EXPLORE NOW",
               "class": "poster-link poster-link-js"
             })
-            <img class="poster-img" src="/static/images/poster.png" alt="POSTER" width="636" height="461">
-            <div class="underpost-text">
+            <img class="poster__img" src="/static/images/poster.png" alt="POSTER" width="636" height="461">
+            <div class="poster__underpost-text">
             Free (continental) USA shipping on all orders of $100 USD or more!
             </div>
           </div>
         </div>
       </section>
-      <section class="categories">
-        <h2 class="section-title category-title container">Category Products</h2>
+      <section class="category">
+        <h2 class="category__title container">Category Products</h2>
         <div class="container">
-          <div class="main-category-product"> 
-          <ul class="hidden-marker category-list">
-            <li class="category-item background-first">
-              <a class="category-link" href="#">
-                <img class="category-img" src="/static/images/category-1.jpg" alt="APPAREL KIDS"  width="280" height="270">
-                <div class="category-text"> Apparel kids </div>
-              </a>
-            </li>
-            <li class="category-item background-second">
-              <a class="category-link" href="#">
-                <img class="category-img" src="/static/images/category-2.jpg" alt="HOLIDAY SHOP" width="280" height="270">
-                <div class="category-text"> Holiday shop </div>
-              </a>
-            </li>
-            <li class="category-item background-third">
-              <a class="category-link" href="./pages/Toys/index.html">
-                <img class="category-img" src="/static/images/category-3.jpg" alt="TOYS" width="280" height="270">
-                <div class="category-text">Toys</div>
-              </a>
-            </li>
-            <li class="category-item background-fourth">
-              <a class="category-link" href="#">
-                <img class="category-img" src="/static/images/category-4.jpg" alt="ACCESSORIES" width="280" height="270">
-                <div class="category-text"> Accessories </div>
-              </a>
-            </li>
+          <ul class="hidden-marker category__list">
+            @@include('card-category/index.html',{
+              "text": "Apparel kids",
+              "imgName": "category-1.jpg",
+              "class": "background-first"
+            })
+            @@include('card-category/index.html',{
+              "text": "Holiday shop",
+              "imgName": "category-2.jpg",
+              "class": "background-second"
+            })                   
+            @@include('card-category/index.html',{
+              "text": "Toys",
+              "imgName": "category-3.jpg",
+              "class": "background-third"
+            })          
+            @@include('card-category/index.html',{
+              "text": "Accessories",
+              "imgName": "category-4.jpg",
+              "class": "background-fourth"
+            })
           </ul>
-          </div>
-          <div class="category-button">
-            <button class="button-list">
-              <img class="button-change" src="/static/images/back.svg" alt="back">
-            </button>
-            <button class="button-list">
-              <img class="button-change" src="/static/images/next.svg" alt="next">
-            </button>
-            <p class="button-text under-category-text">
-          Modern finds for the modern home. Curated goods by unique designers around the world
-          from fashion to furniture for kids and adults.
-            </p>
+            <div class="category__button">
+              <button class="category__button_list">
+                <img class="button-change" src="/static/images/back.svg" alt="back">
+              </button>
+              <button class="category__button_list">
+                <img class="button-change" src="/static/images/next.svg" alt="next">
+              </button>
+              <p class="block-text under-category-text">
+                Modern finds for the modern home. Curated goods by unique designers around the world
+                from fashion to furniture for kids and adults.
+              </p>
+            </div>
           </div>
         </div>
       </section>
-      <section class="main-delivery container">
+      <section class="slider container">
         <h2 class="visually-hidden">DELIVERY</h2>
-        <img class="delivery-img background-fifth" src="/static/images/delivery.jpg" alt="delivery" width="480" height="559">
-        <div class="dilevery-block">
-          <div class="section-title delivery-title"> Delivery</div>
-          <div class="main-delivey-button">
-            <button class="delivery-button-delivery">Delivery </button>
-            <button class="delivery-button margin-delivery">Guarantee </button>
-            <button class="credit-button">Credit </button>
+        <img class="slider__img" src="/static/images/delivery.jpg" alt="delivery" width="480" height="559">
+        <div class="slider__block">
+          <div class="main-category__title slider__title"> Delivery</div>
+          <div class="slider__button">
+            <button class="slider__button_item  slider__button_item_active">Delivery </button>
+            <button class="slider__button_item  slider__button_item_ml_mb">Guarantee </button>
+            <button class="slider__button_item slider__button_item_mt_mb">Credit </button>
           </div>
-          <p class="button-text delivery-text">
+          <p class="block-text slider__text">
             Some days i feel like i've been working on dlk my entire life and there are other days that i am completely
             shocked that four years have flown by. It's simply magical.
           </p>
-          <p class="button-text delivery-text ">
+          <p class="block-text slider__text">
             What started as an outlet to deal with the traumatic loss of my husband, dlk has now become a truly happy
             place for me and i have you and all of the beautiful designers that we work with to thank!
           </p>
@@ -109,56 +104,56 @@
       </section>
       <section class="partners container">
         <h2 class="visually-hidden"> partners</h2>
-        <ul class="hidden-marker partners-list">
-          <li class="partners-item">
-            <a class="partner-link" href="#">
-              <img class="mail-img" src="/static/images/mail.jpg" alt="mail" width="193" height="60">
+        <ul class="hidden-marker partners__list">
+          <li class="partners__item">
+            <a class="partner__link" href="#">
+              <img class="partners__img" src="/static/images/mail.jpg" alt="mail" width="193" height="60">
             </a>
           </li>
-          <li class="partners-item">
-            <a class="partner-link" href="#">
-              <img class="mail-img" src="/static/images/apple.jpg" alt="apple" width="179" height="61">
+          <li class="partners__item">
+            <a class="partner__link" href="#">
+              <img class="partners__img" src="/static/images/apple.jpg" alt="apple" width="179" height="61">
             </a>
           </li>
-          <li class="partners-item">
-            <a class="partner-link" href="#">
-              <img class="mail-img" src="/static/images/eltex.jpg" alt="eltex" width="216" height="46">
+          <li class="partners__item">
+            <a class="partner__link" href="#">
+              <img class="partners__img" src="/static/images/eltex.jpg" alt="eltex" width="216" height="46">
             </a>
           </li>
-          <li class="partners-item">
-            <a class="partner-link" href="#">
-              <img class="mail-img" src="/static/images/owox.jpg" alt="owox" width="211" height="40">
+          <li class="partners__item">
+            <a class="partner__link" href="#">
+              <img class="partners__img" src="/static/images/owox.jpg" alt="owox" width="211" height="40">
             </a>
           </li>
         </ul>
       </section>
-      <div class=" aboutUs-contacts container">
-        <div class="aboutUs-contacts-article">
-          <article class="aboutUs">
-            <h2 class="section-title dlk-title">Design Life Kids</h2>
-            <div class="delivery-button aboutUs-title"> About Us</div>
-            <p class="button-text aboutUs-text">
-              Some days i feel like i've been working on dlk my entire life and there are other days
-              that i am completely shocked that four years have flown by. It's simply magical.
-            </p>
-            @@include('link/index.html',{
-              "text": "buy now",
-              "class": "button-article"
-            })
-          </article>
-          <article class="contacts">
-            <h2 class="section-title contacts-title"> Contacts </h2>
-            <p class="button-text contacts-text">
-              Some days i feel like i've been working on dlk my entire life and there are other days
-              that i am completely shocked that four years have flown by. It's simply magical.
-            </p>
-            <div class="map"> 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4459.84226807081!2d-122.42473714595597!3d37.77633472796363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sTwitter!5e0!3m2!1sru!2sru!4v1582133954039!5m2!1sru!2sru">
-              </iframe>
-            </div>
-          </article>
-        </div>
-        </div>
+      <div class="article container">
+        <article class="aboutUs__article">
+          <h2 class="aboutUs__title_main">Design Life Kids</h2>
+          <div class="aboutUs__title"> About Us</div>
+          <p class="aboutUs-text">
+            Some days i feel like i've been working on dlk my entire life and there are other days
+            that i am completely shocked that four years have flown by. It's simply magical.
+          </p>
+          @@include('link/index.html',{
+          "text": "buy now",
+          "class": "button-article"
+          })
+        </article>
+        <article class="contacts__article">
+          <h2 class="contacts__title"> Contacts </h2>
+          <p class="contacts__text">
+            Some days i feel like i've been working on dlk my entire life and there are other days
+            that i am completely shocked that four years have flown by. It's simply magical.
+          </p>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4459.84226807081!2d-122.42473714595597!3d37.77633472796363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sTwitter!5e0!3m2!1sru!2sru!4v1582133954039!5m2!1sru!2sru">
+            </iframe>
+          </div>
+        </article>
+      </div>
+      </div>
     </main>
     @@include('footer/index.html')
     <div class="modal-form modal-form-none modal-form-js">

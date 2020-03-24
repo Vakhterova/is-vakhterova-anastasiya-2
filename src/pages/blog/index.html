@@ -31,7 +31,61 @@
         <h2 class="visually-hidden"> Last six blog-articles </h2>
         <div class="blog-article">
           <ul class="blog-list hidden-marker">
-            <li class="blog-item">
+            @@include('blog-category/index.html',{
+              "imgName": "blog1.jpg",
+              "date": "23rd August 2018",
+              "title": "Top 5 fastest growing it service companies in philly",
+              "text": "Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence
+              Award!
+              This prestigious award is annually presented to the Top 1% of service providers in the given
+              marketplace."
+            })
+            @@include('blog-category/index.html',{
+              "imgName": "blog2.jpg",
+              "date": "23rd August 2018",
+              "title": "Top 5 fastest growing it service companies in philly",
+              "text": "Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence
+              Award!
+              This prestigious award is annually presented to the Top 1% of service providers in the given
+              marketplace."
+            })
+            @@include('blog-category/index.html',{
+              "imgName": "blog3.jpg",
+              "date": "23rd August 2018",
+              "title": "Top 5 fastest growing it service companies in philly",
+              "text": "Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence
+              Award!
+              This prestigious award is annually presented to the Top 1% of service providers in the given
+              marketplace."
+            })
+            @@include('blog-category/index.html',{
+              "imgName": "blog4.jpg",
+              "date": "23rd August 2018",
+              "title": "Top 5 fastest growing it service companies in philly",
+              "text": "Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence
+              Award!
+              This prestigious award is annually presented to the Top 1% of service providers in the given
+              marketplace."
+            })
+            @@include('blog-category/index.html',{
+              "imgName": "blog5.jpg",
+              "date": "23rd August 2018",
+              "title": "Top 5 fastest growing it service companies in philly",
+              "text": "Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence
+              Award!
+              This prestigious award is annually presented to the Top 1% of service providers in the given
+              marketplace."
+            })
+            @@include('blog-category/index.html',{
+              "imgName": "blog6.jpg",
+              "date": "23rd August 2018",
+              "title": "Top 5 fastest growing it service companies in philly",
+              "text": "Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence
+              Award!
+              This prestigious award is annually presented to the Top 1% of service providers in the given
+              marketplace."
+            })
+          <!--  <li class="blog-item">
               <a class="blog-link" href="">
                 <img class="blog-img" src="/static/images/blog1.jpg" alt="" width="380" height="220">
                 <div class="blog-date"> 23rd August 2018 </div>
@@ -103,32 +157,33 @@
                 </p>
               </a>
             </li>
+            --> 
           </ul>
         </div>
         <div class="pages-block">
-          <button class="page-change change-back">
+          <button class="page-change_back">
           </button>
           <div class="pages">
             <ul class="hidden-marker pagination">
               <li class="pages-list">
-                <a class="page current" href="#">1
+                <a class="page-item current" href="#">1
                 </a>
               </li>
               <li class="pages-list">
-                <a class="page" href="#">2
+                <a class="page-item" href="#">2
                 </a>
               </li>
               <li class="pages-list">
-                <a class="page" href="#">3
+                <a class="page-item" href="#">3
                 </a>
               </li>
               <li class="pages-list">
-                <a class="page" href="#">4
+                <a class="page-item" href="#">4
                 </a>
               </li>
             </ul>
           </div>
-          <button class="page-change change-next">
+          <button class="page-change_next">
           </button>
         </div>
       </section>

@@ -1,0 +1,61 @@
+.card-blog {
+  display: flex;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+
+  &__img {
+    margin-bottom: 18px;
+  }
+  
+  &__date {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 8px;
+    color: #818181;
+  }
+  
+  &__heading {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    color: #1e0606;
+    width: 380px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+  
+  &__text {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 25px;
+    width: 380px;
+    margin-bottom: 21px;
+    color: #1e0606;
+  }
+
+  &__link:hover &__heading, &__link:focus &__heading {
+    text-decoration-line: underline;
+    pointer-events: visible;
+    cursor: pointer;
+  }
+
+  &__link:focus {
+    outline: none;
+  }
+  
+  &__link:active &__heading {
+    text-decoration-line: underline;
+    pointer-events: visible;
+  }
+  
+}
+
+
+

@@ -12,23 +12,26 @@
   </head>
   <body>
     @@include('header/index.html')
-    <main class="toys-page">
-      <h1 class="toy-title container"> Toy for kids </h1>
+    <main class="toy-page">
+      @@include('pages-title/index.html', {
+        "text": "Toy for kids";
+        "class":"container"
+      })
       <div class="toy-breadcrumbs container">
         <ol class="hidden-marker breadcrumbs">
           <li>
-            <a class="breadcrumbs-item" href="/index.html"> Home </a>
+            <a class="breadcrumbs__item" href="/index.html"> Home </a>
           </li>
           <li>
-            <img class="breadcrumbs-item" src="/static/images/bread.svg" alt="&#62;">
+            <img class="breadcrumbs__item" src="/static/images/bread.svg" alt="&#62;">
           </li>
           <li>
-            <a class="breadcrumbs-item" href="catalog/index.html"> Catalog </a>
+            <a class="breadcrumbs__item" href="/pages/catalog/index.html"> Catalog </a>
           </li>
           <li>
-            <img class="breadcrumbs-item" src="/static/images/bread.svg" alt="&#62;">
+            <img class="breadcrumbs__item" src="/static/images/bread.svg" alt="&#62;">
           </li>
-          <li class="breadcrumbs-item active">Toys </li>
+          <li class="breadcrumbs__item breadcrumbs__item_active">Toys </li>
         </ol>
       </div>
       <section class="filters">
@@ -49,29 +52,29 @@
                 <li class="color-item">
                   <label class="filter-item">
                     <input class="filter-item visually-hidden" name="black" type="checkbox">
-                    <span class="filter-item-indicator"> </span>
-                    <span class="filter-item-text"> Black </span> 
+                    <span class="filter-item__indicator"> </span>
+                    <span class="filter-item__text"> Black </span> 
                   </label>
                 </li>
                 <li class="color-item">
                   <label class="filter-item">
                     <input class="filter-item visually-hidden" name="blue" type="checkbox">
-                    <span class="filter-item-indicator"></span>
-                    <span class="filter-item-text"> Blue </span>  
+                    <span class="filter-item__indicator"></span>
+                    <span class="filter-item__text"> Blue </span>  
                   </label>
                 </li>
                 <li class="color-item">
                   <label class="filter-item">
                     <input class="filter-item visually-hidden" name="green" type="checkbox">
-                    <span class="filter-item-indicator"></span>
-                    <span class="filter-item-text"> Green </span>                
+                    <span class="filter-item__indicator"></span>
+                    <span class="filter-item__text"> Green </span>                
                   </label>
                 </li>
                 <li class="color-item">
                   <label class="filter-item">
                     <input class="filter-item visually-hidden" name="white" type="checkbox">
-                    <span class="filter-item-indicator"></span>
-                    <span class="filter-item-text"> White </span> 
+                    <span class="filter-item__indicator"></span>
+                    <span class="filter-item__text"> White </span> 
                   </label>
                 </li>
               </ul>
@@ -82,41 +85,41 @@
                 <li class="delivery-item">
                   <label class="filter-item">
                     <input class="form-radio filter-item visually-hidden" name="delivery" type="radio">
-                    <span class="filter-delivery-indicator"></span>
-                    <span class="filter-item-text"> Free shipping </span>                  
+                    <span class="filter-delivery__indicator"></span>
+                    <span class="filter-item__text"> Free shipping </span>                  
                   </label>
                 </li>
                 <li class="delivery-item">
                   <label class="filter-item">
                     <input class="form-radio filter-item visually-hidden" name="delivery" type="radio">
-                    <span class="filter-delivery-indicator"></span>
-                    <span class="filter-item-text"> Fast shipping </span>  
+                    <span class="filter-delivery__indicator"></span>
+                    <span class="filter-item__text"> Fast shipping </span>  
                   </label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="fieldset-amount">
-              <legend class="filter-name amount-margin">Amount</legend>
+              <legend class="filter-name filter-name_mb">Amount</legend>
               <ul class="range-list hidden-marker ">
                 <li class="amount-button ">
                   <label class="hide-radio">
                     <input class="amount visually-hidden hide-radio" name="indicator" type="radio">
-                    <span class="filter-amount-indicator"> </span>
-                    <span class="filter-amount-text" >  0-5 </span>
+                    <span class="filter-amount__indicator"> </span>
+                    <span class="filter-amount__text" >  0-5 </span>
                   </label>
                 </li>
                 <li class="amount-button">
                   <label class="hide-radio">
                     <input class="amount visually-hidden hide-radio" name="indicator" type="radio">
-                    <span class="filter-amount-indicator"></span>
-                    <span class="filter-amount-text">  10-20 </span>
+                    <span class="filter-amount__indicator"></span>
+                    <span class="filter-amount__text">  10-20 </span>
                   </label>
                 </li>
                 <li class="amount-button">
                   <label class="hide-radio">
                     <input class="amount visually-hidden hide-radio" name="indicator" type="radio">
-                    <span class="filter-amount-indicator"></span>
-                    <span class="filter-amount-text"> 20-50 </span>  
+                    <span class="filter-amount__indicator"></span>
+                    <span class="filter-amount__text"> 20-50 </span>  
                   </label>
                 </li>
               </ul>
@@ -129,105 +132,63 @@
         </div>
       </section>
       <div class="toys container">
-        <ul class="toys-list hidden-marker">
-          <li class="toy-item">
-            <a class="learn-more-link" href="#">
-              <img class="toys-img" src="/static/images/shark.jpg" alt="shark" width="380" height="385">
-              <div class="learn-more"> learn more </div>
-            </a>
-            <div class="product-description">
-              SHARKY BEAN BAG CHAIR COVER
-            </div>
-            <div class="price">
-              <span class="product-price"> $60.00 USD </span>
-            </div>
-          </li>
-          <li class="toy-item">
-            <a class="learn-more-link" href="#">
-              <img class="toys-img" src="/static/images/frames.jpg" alt="deco frames" width="380" height="385">
-              <div class="learn-more"> learn more </div>
-            </a>
-            <div class="product-description">
-              BRASS DECO FRAMES
-            </div>
-            <div class="price">
-              <span class="product-price"> $66.00 USD </span>
-            </div>
-          </li>
-          <li class="toy-item">
-            <a class="learn-more-link" href="#">
-              <img class="toys-img" src="/static/images/apron.jpg" alt="apron" width="380" height="385">
-              <div class="learn-more"> learn more </div>
-            </a>
-            <div class="product-description">
-              CIBO FULL APRON
-            </div>
-            <div class="price">
-              <span class="product-price"> $60.00 USD </span>
-            </div>
-          </li>
-          <li class="toy-item">
-            <a class="learn-more-link" href="#">
-              <img class="toys-img" src="/static/images/machine.jpg" alt="gumball machine" width="380" height="385">
-              <div class="learn-more"> learn more </div>
-            </a>
-            <div class="product-description">
-              GATCHA GATCHA GUMBALL MACHINE
-            </div>
-            <div class="price">
-              <span class="product-price"> $56.00 USD </span>
-            </div>
-          </li>
-          <li class="toy-item">
-            <a class="learn-more-link" href="#">
-              <img class="toys-img" src="/static/images/candle.jpg" alt="candle" width="380" height="385">
-              <div class="learn-more"> learn more </div>
-            </a>
-            <div class="product-description">
-              CHRISTMAS ADVENT SCENTED CANDLE
-            </div>
-            <div class="price">
-              <span class="product-price"> $29.00 USD </span>
-            </div>
-          </li>
-          <li class="toy-item">
-            <a class="learn-more-link" href="#">
-              <img class="toys-img" src="/static/images/spinning.jpg" alt="shark" width="380" height="382">
-              <div class="learn-more"> learn more </div>
-            </a>
-            <div class="product-description">
-              TANGLE SPINNING TEA LIGHT
-            </div>
-            <div class="price">
-              <span class="product-price"> $56.00 USD </span>
-            </div>
-          </li>
+        <ul class="toys__list hidden-marker">
+          @@include('card-toy/index.html', {
+            "imgName": "shark.jpg",
+            "text": "SHARKY BEAN BAG CHAIR COVER",
+            "price": "$60.00 USD"
+          })
+          @@include('card-toy/index.html', {
+            "imgName": "frames.jpg",
+            "text": "BRASS DECO FRAMES",
+            "price": "$66.00 USD"
+          })
+          @@include('card-toy/index.html', {
+            "imgName": "apron.jpg",
+            "text": "CIBO FULL APRON",
+            "price": "$60.00 USD"
+          })
+          @@include('card-toy/index.html', {
+            "imgName": "machine.jpg",
+            "text": "GATCHA GATCHA GUMBALL MACHINE",
+            "price": "$56.00 USD"
+          })
+          @@include('card-toy/index.html', {
+            "imgName": "candle.jpg",
+            "text": "CHRISTMAS ADVENT SCENTED CANDLE",
+            "price": "$56.00 USD"
+          })
+          @@include('card-toy/index.html', {
+            "imgName": "spinning.jpg",
+            "text": "TANGLE SPINNING TEA LIGHT",
+            "price": "$56.00 USD"
+          })
         </ul>
       </div>
       <div class="pages-block container">
-        <button class="page-change_back">
+        <button class="pages__change_back">
         </button>
         <div class="pages">
           <ul class="hidden-marker pagination">
-            <li class="pages-list">
-              <a class="page-item current" href="#">1
+            <li class="pages__list">
+              <a class="pages__item current" href="#">1
               </a>
             </li>
-            <li class="pages-list">
-              <a class="page-item" href="#">2
+            <li class="pages__list">
+              <a class="pages__item" href="#">2
               </a>
             </li>
-            <li class="pages-list">
-              <a class="page-item" href="#">3
+            <li class="pages__list">
+              <a class="pages__item" href="#">3
               </a>
             </li>
-            <li class="pages-list">
-              <a class="page-item" href="#">4
+            <li class="pages__list">
+              <a class="pages__item" href="#">4
               </a>
             </li>
           </ul>
         </div>
-        <button class="page-change_next">
+        <button class="pages__change_next">
         </button>
       </div>
     </main>

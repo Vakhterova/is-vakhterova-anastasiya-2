@@ -1,0 +1,76 @@
+.price {
+  margin-bottom: 25px;
+}
+
+.card-toy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  position: relative;
+
+  &_description {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #1e0606;
+    margin-bottom: 15px;
+    margin-top: 28px;
+  }
+
+  &_price {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1e0606;
+  }
+  &_learn-more {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 29px;
+    color: #1e0606;
+    text-transform: uppercase;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 88px;
+    left: 87px;
+    width: 207px;
+    height: 207px;
+    background-color: #e5eaf8;
+  }
+  &_link {
+    outline: none;
+  }
+
+  &_link:hover &_learn-more,
+  .card-toy_link:focus .card-toy_learn-more {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  
+  &_link:active &_learn-more {
+    opacity: 0.67;
+    cursor: pointer;
+  }
+}
+
+
+
+
+
+
+
+

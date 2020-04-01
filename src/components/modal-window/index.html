@@ -1,0 +1,27 @@
+<form class="modal-window @@class1" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
+  <div class="modal-window__column_100">
+    <label class="form-label" for="input-name"> Name </label>
+    <input class="form-input @@class2" name="name" id="input-name" type="text">
+  </div>
+  <div class="modal-window__row">
+    <div class="modal-window__column">
+      <label class="form-label" for="input-phone"> Phone </label>
+      <input class="form-input" name="phone" id="input-phone" type="tel">
+    </div>
+    <div class="modal-window__column">
+      <label class="form-label" for="input-mail"> Email </label>
+      <input class="form-input" name="email" id="input-mail" type="text">
+    </div>
+  </div>
+  <div class="modal-window__textarea">
+    <label class="form-label" for="input-massage"> Message </label>
+    <textarea class="textarea-massage" name="message" id="input-massage" cols="30" rows="10" style="max-width:600px;"> </textarea>
+  </div>
+  <fieldset class="modal-window__checkbox">
+    <label class="checkbox form-label">
+      <input class="checkbox_margin form-input visually-hidden" name="accept" type="checkbox">
+      <span class="checkbox_indicator"> </span>
+      <span class="filter-item__text"> By clicking on the button, you consent to the processing of your personal data
+      </span>
+    </label>
+  </fieldset>

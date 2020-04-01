@@ -8,23 +8,24 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400i&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-
     <link rel="stylesheet" href="/common.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     @@include('header/index.html')
     <main class="category-products container">
-      <h1 class="category-title">Category Products</h1>
+      @@include('pages-title/index.html', {
+        "text": "Category Products";
+      })
       <div class="products-breadcrumbs">
         <ol class="breadcrumbs hidden-marker ">
           <li>
-            <a class="breadcrumbs-item" href="/index.html"> Home </a>
+            <a class="breadcrumbs__item" href="/index.html"> Home </a>
           </li>
           <li>
-            <img class="breadcrumbs-item" src="/static/images/bread.svg" alt="&#62;">
+            <img class="breadcrumbs__item" src="/static/images/bread.svg" alt="&#62;">
           </li>
-          <li class="breadcrumbs-item active">Catalog </li>
+          <li class="breadcrumbs__item breadcrumbs__item_active">Catalog </li>
         </ol>
       </div>
       <section class="category">
@@ -32,46 +33,37 @@
         <div class="container">
           <div class="category-list">
             <ul class="list hidden-marker">
-              <li class="category-item background-first">
-                <a class="category-link" href="#">
-                  <img class="category-img" src="/static/images/category-1.jpg" alt="APPAREL KIDS" width="280"
-                    height="270">
-                  <div class="category-text">Apparel kids</div>
-                </a>
-              </li>
-              <li class="category-item background-second">
-                <a class="category-link" href="#">
-                  <img class="category-img" src="/static/images/category-2.jpg" alt="HOLIDAY SHOP" width="280"
-                    height="270">
-                  <div class="category-text">Holiday shop </div>
-                </a>
-              </li>
-              <li class="category-item background-third">
-                <a class="category-link" href="./../Toys/index.html">
-                  <img class="category-img" src="/static/images/category-3.jpg" alt="TOYS" width="280" height="270">
-                  <div class="category-text">Toys</div>
-                </a>
-              </li>
-              <li class="category-item background-fourth">
-                <a class="category-link" href="#">
-                  <img class="category-img" src="/static/images/category-4.jpg" alt="ACCESSORIES" width="280"
-                    height="270">
-                  <div class="category-text">Accessories</div>
-                </a>
-              </li>
-              <li class="category-item background-fifth">
-                <a class="category-link" href="#">
-                  <img class="category-img" src="/static/images/category-5.jpg" alt="SALE" width="280" height="270">
-                  <div class="category-text">Sale</div>
-                </a>
-              </li>
-              <li class="category-item background-sixth">
-                <a class="category-link" href="#">
-                  <img class="category-img" src="/static/images/category-6.jpg" alt="APPAREL ADULTS" width="280"
-                    height="270">
-                  <div class="category-text">Apparel adults</div>
-                </a>
-              </li>
+              @@include('card-category/index.html',{
+                "text": "Apparel kids",
+                "imgName": "category-1.jpg",
+                "class": "background-first card-category_mr"
+              })
+              @@include('card-category/index.html',{
+                "text": "Holiday shop",
+                "imgName": "category-2.jpg",
+                "class": "background-second card-category_mr"
+              })
+              @@include('card-category/index.html',{
+                "text": "Toys",
+                "imgName": "category-3.jpg",
+                "class": "background-third card-category_mr";
+                "link": "/toys/index.html"
+              })
+              @@include('card-category/index.html',{
+                "text": "Accessories",
+                "imgName": "category-4.jpg",
+                "class": "background-fourth card-category_mr"
+              })
+              @@include('card-category/index.html',{
+                "text": "Sale",
+                "imgName": "category-5.jpg",
+                "class": "background-fifth card-category_mr"
+              })
+              @@include('card-category/index.html',{
+                "text": "Apparel adults",
+                "imgName": "category-6.jpg",
+                "class": "background-sixth card-category_mr"
+              })
             </ul>
           </div>
         </div>
@@ -87,7 +79,7 @@
             A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an
             excellent choice for a gift for a girl from 4 years old.
           </div>
-          <div class="descriprion-text text-margin">
+          <div class="descriprion-text">
             The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins
             and
             elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.

@@ -29,7 +29,7 @@
             </div>
             @@include('button/index.html',{
               "text": "EXPLORE NOW",
-              "class": "poster-link poster-link-js"
+              "class": "poster-link poster-link_js"
             })
             <img class="poster__img" src="/static/images/poster.png" alt="POSTER" width="636" height="461">
             <div class="poster__underpost-text">
@@ -55,7 +55,7 @@
             @@include('card-category/index.html',{
               "text": "Toys",
               "imgName": "category-3.jpg",
-              "class": "background-third"
+              "class": "background-third",
             })          
             @@include('card-category/index.html',{
               "text": "Accessories",
@@ -70,7 +70,7 @@
               <button class="category__button_list">
                 <img class="button-change" src="/static/images/next.svg" alt="next">
               </button>
-              <p class="block-text under-category-text">
+              <p class="block-text category-text">
                 Modern finds for the modern home. Curated goods by unique designers around the world
                 from fashion to furniture for kids and adults.
               </p>
@@ -80,19 +80,19 @@
       </section>
       <section class="slider container">
         <h2 class="visually-hidden">DELIVERY</h2>
-        <img class="slider__img" src="/static/images/delivery.jpg" alt="delivery" width="480" height="559">
-        <div class="slider__block">
-          <div class="main-category__title slider__title"> Delivery</div>
-          <div class="slider__button">
-            <button class="slider__button_item  slider__button_item_active">Delivery </button>
-            <button class="slider__button_item  slider__button_item_ml_mb">Guarantee </button>
-            <button class="slider__button_item slider__button_item_mt_mb">Credit </button>
+        <img class="slider-img" src="/static/images/delivery.jpg" alt="delivery" width="480" height="559">
+        <div class="slider-block">
+          <div class="main-category__title slider-title"> Delivery</div>
+          <div class="slider-button">
+            <button class="slider-button__item  slider-button__item_active">Delivery </button>
+            <button class="slider-button__item  slider-button__item_mb">Guarantee </button>
+            <button class="slider-button__item slider-button__item_mt">Credit </button>
           </div>
-          <p class="block-text slider__text">
+          <p class="block-text slider-text">
             Some days i feel like i've been working on dlk my entire life and there are other days that i am completely
             shocked that four years have flown by. It's simply magical.
           </p>
-          <p class="block-text slider__text">
+          <p class="block-text slider-text">
             What started as an outlet to deal with the traumatic loss of my husband, dlk has now become a truly happy
             place for me and i have you and all of the beautiful designers that we work with to thank!
           </p>
@@ -131,7 +131,7 @@
         <article class="aboutUs__article">
           <h2 class="aboutUs__title_main">Design Life Kids</h2>
           <div class="aboutUs__title"> About Us</div>
-          <p class="aboutUs-text">
+          <p class="aboutUs__text">
             Some days i feel like i've been working on dlk my entire life and there are other days
             that i am completely shocked that four years have flown by. It's simply magical.
           </p>
@@ -156,38 +156,15 @@
       </div>
     </main>
     @@include('footer/index.html')
-    <div class="modal-form modal-form-none modal-form-js">
-      <form class="modal-form-window" action="https://form-data-dl.herokuapp.com/api/messages" method="POST">
-        <div class="form-column-100">
-          <label class="form-label" for="input-name"> Name </label>
-          <input class="form-input form-input-js" name="name" id="input-name" type="text">
-        </div>
-        <div class="form-row">
-          <div class="form-column">
-            <label class="form-label" for="input-phone"> Phone </label>
-            <input class="form-input" name="phone" id="input-phone" type="tel">
-          </div>
-          <div class="form-column">
-            <label class="form-label" for="input-mail"> Email </label>
-            <input class="form-input" name="email" id="input-mail" type="text">
-          </div>
-        </div>
-        <div class="form-textarea">
-          <label class="form-label" for="input-massage"> Message </label>
-          <textarea class="textarea-massage" name="message" id="input-massage" cols="30" rows="10" style="max-width:600px;"> </textarea>
-        </div>
-        <fieldset class="form-click">
-          <label class="checkbox form-label">
-            <input class="checkbox-margin form-input visually-hidden" name="accept" type="checkbox">
-            <span class="checkbox-indicator"> </span>
-            <span class="filter-item-text"> By clicking on the button, you consent to the processing of your personal data </span>
-          </label>
-        </fieldset>
+    <div class="modal-form modal-form_none modal-form_js">
+      @@include('modal-window/index.html', {
+        "class1": "form-input_js"
+      })
       @@include('button/index.html',{
           "text": "Submit",
           "class": "modal-form-button"
       })
-        <button class="modal-form-x modal-form-x-js" type="button"> 
+        <button class="modal-form__x modal-form__x_js" type="button"> 
           <img src="/static/images/x.png" alt="X"> </button>
       </form>
     </div>

@@ -7,15 +7,15 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400i&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="/common.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   </head>
   <body>
     @@include('header/index.html')
     <main class="category-products container">
-      @@include('pages-title/index.html', {
-        "text": "Category Products";
+      @@include('pages-title/index.html',{
+        "text": "Category Products"
       })
       <div class="products-breadcrumbs">
         <ol class="breadcrumbs hidden-marker ">
@@ -46,8 +46,8 @@
               @@include('card-category/index.html',{
                 "text": "Toys",
                 "imgName": "category-3.jpg",
-                "class": "background-third card-category_mr";
-                "link": "/toys/index.html"
+                "class": "background-third card-category_mr",
+                "link": "/pages/toys/index.html"
               })
               @@include('card-category/index.html',{
                 "text": "Accessories",
@@ -70,7 +70,10 @@
       </section>
       <section class="container">
         <div class="product-description">
-          <h2 class="category-title description">Product Description </h2>
+          @@include('pages-title/index.html',{
+            "text": "Product Description",
+            "class": "description"
+          })
           <div class="descriprion-text">
             Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even
             bathe her, just like a little sister.

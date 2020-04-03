@@ -17,7 +17,7 @@
     font-weight: bold;
     font-size: 40px;
     line-height: 110%;
-    color: #1e0606;
+    color: $Black;
     margin-bottom: 20px;
     margin-top: 89px;
     margin-left: 133px;
@@ -33,7 +33,7 @@
     font-weight: normal;
     font-size: 20px;
     line-height: 25px;
-    color: #1e0606;
+    color: $Black;
     margin-bottom: 20px;
     margin-top: 20px;
     margin-left: 133px;
@@ -118,7 +118,7 @@
     font-weight: bold;
     font-size: 38px;
     line-height: 46px;
-    color: #1e0606;
+    color: $Black;
     text-transform: uppercase;
   }
 
@@ -154,7 +154,7 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
-  color: #1e0606;
+  color: $Black;
 }
 
 .category-text {
@@ -186,7 +186,7 @@
     font-weight: 700;
     font-size: 38px;
     line-height: 46px;
-    color: #1e0606;
+    color: $Black;
     text-transform: uppercase;
   }
 
@@ -266,13 +266,13 @@
 
 /*about us*/
 
-.article {
+.wrapper {
   display: flex;
   justify-content: flex-start;
   margin-bottom: -20px;
 }
 
-.aboutUs__article {
+.info-box {
   background-color: #e1f0f7;
   display: flex;
   position: relative;
@@ -281,91 +281,92 @@
   margin-bottom: 168px;
   width: 543px;
   margin-right: 57px;
+
+  &__title-main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    position: absolute;
+    top: -25px;
+    bottom: 231px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: "Montserrat",sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    color: $Black;
+    text-transform: uppercase;
+  }
+  
+  &__title {
+    margin-top: 31px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    font-family: Crimson Text;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  &__text {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 483px;
+    margin-top: 0px;
+    font-family: "Open Sans",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $Black;
+  }
+
+  &__contacts {
+    background-color: #e1f0f7;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 194px;
+    width: 543px;
+  }
+  
+  &__contacts-title {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    position: absolute;
+    bottom: 189px;
+    margin-bottom: 0px;
+    font-family: "Montserrat",sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    color: $Black;
+    text-transform: uppercase;
+  }
+
+  &__contacts-text {
+    width: 483px;
+    padding-bottom: 0px;
+    margin-top: 40px;
+    margin-left: 30px;
+    font-family: "Open Sans",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $Black;
+  }
+  
 }
 
-.aboutUs__title_main {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 30px;
-  position: absolute;
-  top: -25px;
-  bottom: 231px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-family: "Montserrat",sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 38px;
-  line-height: 46px;
-  color: #1e0606;
-  text-transform: uppercase;
-}
-
-.aboutUs__title {
-  margin-top: 31px;
-  margin-bottom: 10px;
-  margin-left: 30px;
-  font-family: Crimson Text;
-  font-style: italic;
-  font-weight: normal;
-  font-size: 26px;
-  line-height: 32px;
-}
-
-.aboutUs__text {
-  margin-left: 30px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  width: 483px;
-  margin-top: 0px;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  color: #1e0606;
-
-}
-
-.contacts__article {
-  background-color: #e1f0f7;
-  display: flex;
-  position: relative;
-  align-items: flex-start;
-  flex-direction: column;
-  margin-bottom: 194px;
-  width: 543px;
-}
-
-.contacts__title {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 30px;
-  position: absolute;
-  bottom: 189px;
-  margin-bottom: 0px;
-  font-family: "Montserrat",sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 38px;
-  line-height: 46px;
-  color: #1e0606;
-  text-transform: uppercase;
-}
-
-.contacts__text {
-  width: 483px;
-  padding-bottom: 0px;
-  margin-top: 40px;
-  margin-left: 30px;
-  font-family: "Open Sans",sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  color: #1e0606;
-}
 
 /* map in articke */
 .map {

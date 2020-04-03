@@ -15,7 +15,9 @@
 <body>
   @@include('header/index.html')
   <main class="main-contact container">
-    <h1 class="contact-title"> Contact us </h1>
+    @@include('pages-title/index.html',{
+      "text": "Contact us"
+    })
     <div class="contact-breadcrumbs">
       <ol class="breadcrumbs hidden-marker">
         <li>

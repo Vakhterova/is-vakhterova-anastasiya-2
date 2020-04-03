@@ -17,6 +17,8 @@ html {
   box-sizing: inherit;
 }
 
+$Black:#1e0606;
+
 .container {
   width: 100%;
   max-width: 1220px;
@@ -55,7 +57,7 @@ html {
     font-weight: normal;
     font-size: 20px;
     line-height: 25px;
-    color: #1e0606;
+    color: $Black;
     margin-right: 20px;
     margin-bottom: 46px;
     display: flex;
@@ -95,7 +97,7 @@ html {
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
-    color: #1e0606;
+    color: $Black;
 
     &:hover, &:focus {
       opacity: 0.5;
@@ -162,11 +164,12 @@ html {
 // Подключение компонентов
 @import "./header/header";
 @import "./footer/footer";
+@import "./card-category/card-category";
 @import "./button/button";
 @import "./link/link";
-@import "./card-category/card-category";
 @import "./card-blog/card-blog";
 @import "./card-toy/card-toy";
 @import "./modal-window/modal-window";
-@import "./pages-title/pages-title";
+@import "./pages-title/pages-title"
+
 

@@ -29,12 +29,13 @@
 
 .nav__item {
   font-family: "Open Sans", sans-serif;
-  color: $Black;
+  color: #1e0606;
   font-size: 14px;
   line-height: 19px;
   text-transform: uppercase;
   margin-right: 20px;
   text-decoration: none;
+  transition:opacity .4s;
 
   &:hover,&:focus {
     opacity: 50%;
@@ -70,6 +71,7 @@
   padding: 0;
   border: none;
   background-color: white;
+  transition:opacity .4s;
 
   &:hover,&:focus {
     opacity: 50%;
@@ -85,15 +87,19 @@
   }
 }
 
+.header-logo {
+  transition:opacity .4s;
 
-.header-logo:hover,.header-logo:focus {
-  opacity: 50%;
-}
-
-.header-logo:active {
-  opacity: 20%;
-}
-
-.header-logo:focus {
-  outline: none;
+  &:hover,&:focus {
+    opacity: 50%;
+  }
+  
+  &:active {
+    opacity: 20%;
+  }
+  
+  &:focus {
+    outline: none;
+  }
+  
 }

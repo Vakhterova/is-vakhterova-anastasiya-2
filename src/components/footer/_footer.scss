@@ -23,6 +23,7 @@
     line-height: 22px;
     color: #ffffff;
     text-decoration: none;
+    transition: opacity .4s;
   
     &:hover,&:focus {
       opacity: 0.5;
@@ -90,6 +91,7 @@
 
 .social-item {
   margin-right: 5px;
+  transition: opacity .4s;
 
   &:hover,&:focus {
     opacity: 0.5;
@@ -118,6 +120,7 @@
   background-color: #666666;
   border: 1px solid #666666; 
   box-sizing:border-box;
+  transition: border .4s;
 
   &::placeholder {
     color: #ebebeb;
@@ -168,6 +171,7 @@ input[placeholder="Email"] {
   font-size: 16px;
   line-height: 22px;
   color: #a2a2a2;
+  transition: color .4s;
 }
 
 .design:hover {
@@ -205,6 +209,8 @@ input[placeholder="Email"] {
   align-items: center;
   margin-top: -2px;
   text-decoration: none;
+  transition: color .4s;
+
 
   &:hover, &:focus {
     color: #C29974;

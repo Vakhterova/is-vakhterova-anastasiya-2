@@ -30,17 +30,11 @@
 
 .card-category__link:hover .card-category__text, .card-category__link:focus .card-category__text {
   text-decoration-line: underline;
-  pointer-events: visible;
   cursor: pointer;
 }
 
 .card-category__link:focus {
   outline: none;
-}
-
-.category__link:active .category__text {
-  text-decoration-line: underline;
-  pointer-events: visible;
 }
 
 .background-first{
@@ -60,31 +54,9 @@
 }
 
 
-
-
-
-
-
-
 .card-category_mr {
   margin-right: 20px;
   margin-bottom: 23px;
-}
-
-.background-first {
-  background-color: #dbe4db;
-}
-
-.background-second {
-  background-color: rgba(186, 142, 107, 0.3);
-}
-
-.background-third {
-  background-color: #f8f2da;
-}
-
-.background-fourth {
-  background-color: rgba(9, 3, 79, 0.17);
 }
 
 .background-fifth {

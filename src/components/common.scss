@@ -17,7 +17,7 @@ html {
   box-sizing: inherit;
 }
 
-$Black:#1e0606;
+
 
 .container {
   width: 100%;
@@ -57,7 +57,7 @@ $Black:#1e0606;
     font-weight: normal;
     font-size: 20px;
     line-height: 25px;
-    color: $Black;
+    color: #1e0606;
     margin-right: 20px;
     margin-bottom: 46px;
     display: flex;
@@ -97,7 +97,9 @@ $Black:#1e0606;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
-    color: $Black;
+    color: #1e0606;
+    transition:opacity .4s;
+    
 
     &:hover, &:focus {
       opacity: 0.5;
@@ -115,6 +117,7 @@ $Black:#1e0606;
     transform: matrix(-1, 0, 0, 1, 0, 0);
     background-color: #fff;
     border: none;
+    transition:background-image .4s;
   
     &:hover,&:focus {
       background-image: url(/static/images/next2.png);
@@ -136,6 +139,7 @@ $Black:#1e0606;
     height: 30px;
     background-color: #fff;
     border: none;
+    transition:background-image .4s;
   
     &:hover,&:focus {
       background-image: url(/static/images/next2.png);

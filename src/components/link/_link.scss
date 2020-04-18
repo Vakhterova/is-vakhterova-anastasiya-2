@@ -10,6 +10,7 @@
   padding: 9px 22px;
   border: none;
   cursor: pointer;
+  transition:background-color .4s;
 }
 
 .button-article {
@@ -24,8 +25,7 @@
 }
 
 
-.button:hover,
-.button:focus {
+.button:hover,.button:focus {
   background-color: #c29974;
 }
 

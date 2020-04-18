@@ -4,7 +4,7 @@
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 42px;
-  padding-top: 22px;                     /* ОК margin-bottom: 60px; сделать марджины для стр конт инф плюсом*/
+  padding-top: 22px;                    
   margin: auto;
   background-color: #e5eaf8;
   position: relative;
@@ -13,9 +13,9 @@
 .form-label {
   font-size: 14px;
   line-height: 16px;
-  margin-top: 20px;                        /*ok */
+  margin-top: 20px;                       
   margin-bottom: 1px;
-  color: $Black;
+  color: #1e0606;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -24,89 +24,91 @@
 
 .form-input {
   line-height: 47px;
-  border: 2px solid rgba(0, 0, 0, 0.2);       /*ok */
+  border: 2px solid rgba(0, 0, 0, 0.2);       
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  color: $Black;
+  color: #1e0606;
   padding-left: 20px;
   margin-top: 6px;
+  transition:border .4s;
 }
 
 .modal-window__checkbox {
-  margin-bottom: 20px;                /*ok*/
+  margin-bottom: 20px;                
   border: 0 none;
   padding: 0px;
 }
 
 .textarea-massage {
-  height: 150px;                            /*ok*/
+  height: 150px;                            
   margin-top: 6px;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border .4s;
 }
 
 .modal-window__textarea {
   display: flex;
-  flex-direction: column;    /*ok */
+  flex-direction: column;    
   margin-bottom: 22px;
 }
 
-.modal-window__row {                /*ok */
+.modal-window__row {               
   display: flex;
   justify-content: space-between;
 }
 
 .modal-window__column {
-  display: flex;                     /*ok */
+  display: flex;                     
   flex-direction: column;
   width: 290px;
 }
 
-.modal-window__column_100 {            /*ok */
+.modal-window__column_100 {            
   display: flex;
   flex-direction: column;
   width: 600px;
 }
 
-.form-input:hover, .form-input:focus {              /*ok*/
+.form-input:hover, .form-input:focus {              
   border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .form-input:active {
-  border: 2px solid rgba(0, 0, 0, 0.2);       /*ok*/
+  border: 2px solid rgba(0, 0, 0, 0.2);       
 }
 
-.form-input:focus {              /*ok*/
+.form-input:focus {             
   outline: none;
 }
 
-.textarea-massage:hover, .textarea-massage:focus {         /*ok*/
+.textarea-massage:hover, .textarea-massage:focus {        
   border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
-.textarea-massage:active {                        /*ok*/
+.textarea-massage:active {                       
   border: 2px solid rgba(0, 0, 0, 0.2);
 }
 
-.textarea-massage:focus {            /*ok*/
+.textarea-massage:focus {            
   outline: none;
 }
 
-.checkbox-margin {           /*ok*/
+.checkbox-margin {           
   margin-right: 15px;
 }
 
 /*checkbox */
 
 .checkbox_indicator {
-  padding-right: 32px;       /*ok*/
+  padding-right: 32px;       
   position: relative;
 }
 
 
-.checkbox_indicator::before {    /*ok*/
+.checkbox_indicator::before {    
   content: "";
   width: 19px;
   height: 19px;
@@ -121,7 +123,7 @@
 }
 
 
-.form-input:checked ~ .checkbox_indicator::after {     /*ok*/
+.form-input:checked ~ .checkbox_indicator::after {     
   content: "";
   background-image: url(/static//images/checked.svg);
   position: absolute;
@@ -132,5 +134,5 @@
 }
 
 .form-input:checked ~ .filter-item-text,.form-input:hover ~ .filter-item-text,.form-input:focus ~ .filter-item__text {
-  text-decoration-line: underline;      /*ok*/
+  text-decoration-line: underline;      
 }

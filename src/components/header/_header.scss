@@ -3,12 +3,21 @@
   background-color: white;
   margin-top: 50px;
   padding-bottom: 0px;
-}
-
-.header-content {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: 0px) and (max-width: 810px) {
+    justify-content: space-between;
+  }
+
+  @media (min-width: 768px) and (max-width: 810px) {
+    margin-top: 30px;
+  }
+
+  @media (min-width: 0px) and (max-width: 767px) {
+    margin-top: 25px;
+  }
 }
 
 .header-nav {
@@ -18,12 +27,20 @@
   align-items: center;
   flex-wrap: wrap;
 
+  @media (min-width: 0px) and (max-width: 810px) {
+    width: initial;
+  }
+
   &__list {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 0px;
-  margin-left: 60px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0px;
+    margin-left: 60px;
+    flex-wrap: wrap;
+
+    @media (min-width: 0px) and (max-width: 810px) {
+      display: none;
+    }
   }
 }
 
@@ -35,9 +52,9 @@
   text-transform: uppercase;
   margin-right: 20px;
   text-decoration: none;
-  transition:opacity .4s;
+  transition: opacity 0.4s;
 
-  &:hover,&:focus {
+  &:hover,  &:focus {
     opacity: 50%;
   }
 
@@ -59,6 +76,27 @@
   height: 23.01px;
   margin-left: 23.45px;
   margin-right: 0px;
+
+  @media (min-width: 0px) and (max-width: 810px) {
+    display: none;
+    width: initial;
+  }
+}
+
+.header-item__menu {
+  display: none;
+  border: none;
+  background-color: transparent;
+  font-family: "Open Sans", sans-serif;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #1e0606;
+
+  @media (min-width: 0px) and (max-width: 810px) {
+    display: initial;
+  }
 }
 
 .header-nav__contact {
@@ -71,9 +109,10 @@
   padding: 0;
   border: none;
   background-color: white;
-  transition:opacity .4s;
+  transition: opacity 0.4s;
 
-  &:hover,&:focus {
+  &:hover,
+  &:focus {
     opacity: 50%;
     cursor: pointer;
   }
@@ -88,18 +127,71 @@
 }
 
 .header-logo {
-  transition:opacity .4s;
+  transition: opacity 0.4s;
 
-  &:hover,&:focus {
+  &:hover,
+  &:focus {
     opacity: 50%;
   }
-  
+
   &:active {
     opacity: 20%;
   }
-  
+
   &:focus {
     outline: none;
   }
-  
 }
+
+.logo {
+  @media (min-width: 376px) and (max-width: 810px) {
+    width: 62px;
+    height: 32px;
+  }
+
+  @media (min-width: 0px) and (max-width: 375px) {
+    width: 42px;
+    height: 22px;
+  }
+}
+
+/*
+.mobile-header {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color:rgba(125, 151, 218, 0.8);
+  $height: 100%;
+  height: $height;
+  box-sizing: border-box;
+
+
+  @media (min-width:0px) and (max-width:810px) {
+    display: initial;
+}
+
+&::before{
+  content: "";
+  position: absolute;
+  background-color: #FFFFFF;
+  width: 100%;
+  min-height: 385px;
+}
+
+}
+
+/*
+
+
+.mobile-header__close-btn {
+  width: initial;
+  display: none;
+
+  @media (min-width:0px) and (max-width:767px) {
+    width: 16px;
+
+}
+}*/

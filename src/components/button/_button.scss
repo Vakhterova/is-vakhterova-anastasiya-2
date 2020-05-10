@@ -1,5 +1,14 @@
 /* button */
 
+div .button {
+  @media (min-width: 0px) and (max-width: 691px) {
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    padding: 8px 20px;
+  }
+}
+
 .button {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
@@ -12,24 +21,24 @@
   padding: 9px 22px;
   border: none;
   cursor: pointer;
-  transition:background-color .4s;
-  
-  &:hover, &:focus {
+  transition: background-color 0.4s;
+
+  &:hover,  &:focus {
     background-color: #c29974;
-    }
-
-    &:active {
-  background-color: #cfaf91;
-    }
-
-    &:focus {
-  outline: none;
-    } 
-  
-    &:disabled {
-  background-color: #c1c1c1;
-    }
   }
+
+  &:active {
+    background-color: #cfaf91;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: #c1c1c1;
+  }
+}
 
 .poster-link {
   width: 161px;
@@ -38,12 +47,31 @@
   margin-bottom: 89px;
   display: block;
   cursor: pointer;
+
+  @media (min-width: 768px) and (max-width: 810px) {
+    margin-left: 65px;
+  }
+
+  @media (min-width: 0px) and (max-width: 767px) {
+    margin-left: 20px;
+    width: 142px;
+    min-height: 36px;
+    margin-bottom: 188px;
+  }
 }
 
 .filter-form-button {
   display: flex;
   margin-bottom: 135px;
   margin-top: 39px;
+
+  @media (min-width: 692px) and (max-width: 1160px) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 0px) and (max-width: 691px) {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 113px;
+  }
 }
-
-

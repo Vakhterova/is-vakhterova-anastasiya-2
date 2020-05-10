@@ -4,10 +4,28 @@
   margin-left: 10px;
   margin-bottom: 10px;
 
+  @media (min-width: 695px) and (max-width: 819px) {
+    margin-bottom: 6px;
+  }
+
+  @media (min-width: 0px) and (max-width: 694px) {
+    margin-bottom: 6px;
+  }
+
   &__img {
     margin-bottom: 18px;
+
+    @media (min-width: 695px) and (max-width: 819px) {
+      width: 314px;
+      height: 182px;
+    }
+
+    @media (min-width: 0px) and (max-width: 694px) {
+      width: 335px;
+      height: 194px;
+    }
   }
-  
+
   &__date {
     font-family: "Roboto", sans-serif;
     font-style: normal;
@@ -17,7 +35,7 @@
     margin-bottom: 8px;
     color: #818181;
   }
-  
+
   &__heading {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
@@ -28,8 +46,16 @@
     width: 380px;
     margin-top: 0px;
     margin-bottom: 15px;
+
+    @media (min-width: 695px) and (max-width: 819px) {
+      width: 314px;
+    }
+
+    @media (min-width: 0px) and (max-width: 694px) {
+      width: 335px;
+    }
   }
-  
+
   &__text {
     font-family: "Open Sans", sans-serif;
     font-style: normal;
@@ -38,9 +64,17 @@
     width: 380px;
     margin-bottom: 21px;
     color: #1e0606;
+
+    @media (min-width: 695px) and (max-width: 819px) {
+      width: 314px;
+    }
+
+    @media (min-width: 0px) and (max-width: 694px) {
+      width: 335px;
+    }
   }
 
-  &__link:hover &__heading, &__link:focus &__heading {
+  &__link:hover &__heading,  &__link:focus &__heading {
     text-decoration-line: underline;
     pointer-events: visible;
     cursor: pointer;
@@ -49,13 +83,9 @@
   &__link:focus {
     outline: none;
   }
-  
+
   &__link:active &__heading {
     text-decoration-line: underline;
     pointer-events: visible;
   }
-  
 }
-
-
-

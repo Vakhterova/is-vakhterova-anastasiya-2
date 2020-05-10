@@ -5,6 +5,10 @@
   margin-bottom: 44px;
   overflow: hidden;
   margin-left: -109px;
+
+  @media (min-width:768px) and (max-width:1400px) {
+  width: 100%;
+    } 
 }
 
 .animation-title {
@@ -60,7 +64,7 @@
   z-index: 3;
 }
 
-.car-1 {
+.car_1 {
   background-image: url("http://localhost:3000/static/images/animation/car1.png");
   position: absolute;
   width: 250px;
@@ -72,7 +76,7 @@
   opacity: 0;
 }
 
-.car-2 {
+.car_2 {
   background-image: url("http://localhost:3000/static/images/animation/car2.png");
   width: 205px;
   height: 97px;
@@ -85,7 +89,7 @@
   animation-delay: 1.5s;
 }
 
-.car-3 {
+.car_3 {
   background-image: url("http://localhost:3000/static/images/animation/car3.png");
   width: 247px;
   height: 66px;
@@ -98,7 +102,7 @@
   animation-delay: 3.5s;
 }
 
-.car-4 {
+.car_4 {
   background-image: url("http://localhost:3000/static/images/animation/car4.png");
   width: 269px;
   height: 126px;
@@ -121,7 +125,7 @@
   z-index: 4;
 }
 
-.lantern-1 {
+.lantern_1 {
   background-image: url("http://localhost:3000/static/images/animation/lanterns.png");
   background-position: 1.21%;
   width: 150px;
@@ -132,7 +136,7 @@
   z-index: 1;
 }
 
-.lantern-2 {
+.lantern_2 {
   background-image: url("http://localhost:3000/static/images/animation/lanterns.png");
   width: 151px;
   height: 393px;
@@ -142,7 +146,7 @@
   position: absolute;
 }
 
-.road-1 {
+.road_1 {
   background-image: url("http://localhost:3000/static/images/animation/road1.png");
   min-width: 1521px;
   height: 86px;
@@ -152,7 +156,7 @@
   z-index: 1;
 }
 
-.road-2 {
+.road_2 {
   background-image: url("http://localhost:3000/static/images/animation/road2.png");
   min-width: 1521px;
   height: 97.7px;
@@ -161,7 +165,7 @@
   top: 597px;
 }
 
-.stone-1 {
+.stone_1 {
   position: absolute;
   background-image: url("http://localhost:3000/static/images/animation/stones1.png");
   width: 377.36px;
@@ -171,7 +175,7 @@
   z-index: 2;
 }
 
-.stone-2 {
+.stone_2 {
   position: absolute;
   background-image: url("http://localhost:3000/static/images/animation/stones2.png");
   width: 167.63px;
@@ -181,7 +185,7 @@
   z-index: 3;
 }
 
-.stone-3 {
+.stone_3 {
   position: absolute;
   background-image: url("http://localhost:3000/static/images/animation/stones3.png");
   width: 34.59px;
@@ -191,7 +195,7 @@
   z-index: 3;
 }
 
-.stone-4 {
+.stone_4 {
   position: absolute;
   background-image: url("http://localhost:3000/static/images/animation/stones4.png");
   width: 35.01px;
@@ -200,7 +204,7 @@
   top: 761px;
 }
 
-.stone-5 {
+.stone_5 {
   position: absolute;
   background-image: url("http://localhost:3000/static/images/animation/stones5.png");
   width: 22.32px;
@@ -209,7 +213,7 @@
   top: 715px;
 }
 
-.stone-6 {
+.stone_6 {
   position: absolute;
   background-image: url("http://localhost:3000/static/images/animation/stones6.png");
   width: 225px;
@@ -218,7 +222,7 @@
   top: 726px;
 }
 
-.stone-7 {
+.stone_7 {
   position: absolute;
   background-image: url("http://localhost:3000/static/images/animation/stones7.png");
   width: 38px;
@@ -227,7 +231,7 @@
   top: 743px;
 }
 
-.stone-8 {
+.stone_8 {
   position: absolute;
   background-image: url("http://localhost:3000/static/images/animation/stones8.png");
   width: 73px;
@@ -236,7 +240,7 @@
   top: 719px;
 }
 
-.stone-9 {
+.stone_9 {
   position: absolute;
   background-image: url("http://localhost:3000/static/images/animation/stones9.png");
   width: 74px;
@@ -245,7 +249,7 @@
   top: 749px;
 }
 
-.stone-10 {
+.stone_10 {
   position: absolute;
   background-image: url("http://localhost:3000/static/images/animation/stones10.png");
   width: 36px;
@@ -254,7 +258,7 @@
   top: 749px;
 }
 
-.stone-11 {
+.stone_11 {
   position: absolute;
   background-image: url("http://localhost:3000/static/images/animation/stones11.png");
   background-position: -0.79%;

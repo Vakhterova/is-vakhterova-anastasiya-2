@@ -16,6 +16,10 @@
 .contact {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: 0px) and (max-width: 819px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .contactUs-text {
@@ -25,10 +29,26 @@
   font-size: 16px;
   line-height: 22px;
   color: #1e0606;
-  width: 380px;
+  max-width: 380px;
   display: flex;
   margin-top: 2px;
   margin-bottom: 20px;
+
+  @media (min-width: 695px) and (max-width: 819px) {
+    width: 536px;
+    text-align: center;
+  }
+
+  @media (min-width: 0px) and (max-width: 694px) {
+    width: 335px;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+  }
+
+  @media (min-width: 820px) and (max-width: 1105px) {
+    padding-left: 5px;
+  }
 }
 
 .help-text {
@@ -39,9 +59,22 @@
   line-height: 34px;
   text-transform: uppercase;
   color: #c29974;
-  width: 380px;
-}
+  max-width: 380px;
 
+  @media (min-width: 695px) and (max-width: 819px) {
+    width: 536px;
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: 0px) and (max-width: 694px) {
+    width: 329px;
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+}
 
 .contact-form {
   display: flex;
@@ -54,9 +87,12 @@
 .contact-text {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 0px) and (max-width: 819px) {
+    align-items: center;
+  }
 }
 
 .contact {
   display: flex;
 }
-

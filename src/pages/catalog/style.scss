@@ -1,4 +1,16 @@
 /* product category */
+.category-container_mobile {
+  @media (min-width: 695px) and (max-width: 810px) {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  @media (min-width: 0px) and (max-width: 694px) {
+    padding-left: -10px;
+    padding-right: -10px;
+    margin: 0px;
+  }
+}
 
 .category-text {
   font-family: "Montserrat", sans-serif;
@@ -19,41 +31,42 @@
 .card-category_mr {
   margin-right: 20px;
   margin-bottom: 23px;
-}
 
-.background-first {
-  background-color: #dbe4db;
-}
+  @media (min-width: 695px) and (max-width: 1160px) {
+    margin-right: 0px;
+    padding-right: 19px;
+  }
 
-.background-second {
-  background-color: rgba(186, 142, 107, 0.3);
-}
-
-.background-third {
-  background-color: #f8f2da;
-}
-
-.background-fourth {
-  background-color: rgba(9, 3, 79, 0.17);
-}
-
-.background-fifth {
-  background-color: rgba(207, 68, 111, 0.25);
-}
-
-.background-sixth {
-  background-color: rgba(125, 151, 218, 0.2);
+  @media (min-width: 0px) and (max-width: 694px) {
+    margin-right: 0px;
+    padding-right: 15px;
+    margin-bottom: 15.76px;
+  }
 }
 
 .card-category:nth-child(4) {
   margin-left: 195px;
+
+  @media (min-width: 0px) and (max-width: 1155px) {
+    margin-left: 0px;
+  }
 }
 
 .category-list {
   margin-top: 0px;
-  margin-left: -20px;
+  margin-left: 0px;
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: 695px) and (max-width: 810px) {
+    margin-left: -11px;
+    margin-right: -7px;
+  }
+
+  @media (min-width: 0px) and (max-width: 694px) {
+    margin-left: -11px;
+    margin-right: -7px;
+  }
 }
 
 .list {
@@ -70,6 +83,18 @@
   width: 680px;
   margin-left: 177px;
   margin-bottom: 60px;
+
+  @media (min-width: 695px) and (max-width: 1160px) {
+    margin-left: 0px;
+    width: 648px;
+  }
+
+  @media (min-width: 0px) and (max-width: 694px) {
+    margin-left: 0px;
+    width: 335px;
+    flex-wrap: wrap;
+    display: flex;
+  }
 }
 
 .description {
@@ -77,6 +102,16 @@
   margin-top: 21px;
   font-size: 38px;
   line-height: 46px;
+
+  @media (min-width: 695px) and (max-width: 810px) {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  @media (min-width: 0px) and (max-width: 694px) {
+    font-size: 24px;
+    line-height: 29px;
+  }
 }
 
 .descriprion-text {
@@ -88,4 +123,16 @@
   color: #1e0606;
   width: 680px;
   margin-bottom: 16px;
+
+  @media (min-width: 565px) and (max-width: 810px) {
+    width: 648px;
+  }
+
+  @media (min-width: 0px) and (max-width: 564px) {
+    width: 335px;
+  }
+
+  @media (min-width: 0px) and (max-width: 320px) {
+    width: 315px;
+  }
 }

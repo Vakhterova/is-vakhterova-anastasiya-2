@@ -7,4 +7,16 @@
   text-transform: uppercase;
   margin-top: 60px;
   margin-bottom: 15px;
+
+  @media (min-width:768px) and (max-width:810px) {
+    font-size: 40px;
+    line-height: 49px;
+    margin-bottom: 10px;
+  }  
+
+  @media (min-width:0px) and (max-width:767px) {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 10px;
+  } 
 }

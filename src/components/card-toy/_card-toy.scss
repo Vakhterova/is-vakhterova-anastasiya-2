@@ -12,6 +12,10 @@
   margin-bottom: 20px;
   position: relative;
 
+  @media (min-width: 0px) and (max-width: 1160px) {
+    margin-left: 0px;
+  }
+
   &_description {
     font-family: "Open Sans", sans-serif;
     font-style: normal;
@@ -21,6 +25,23 @@
     color: #1e0606;
     margin-bottom: 15px;
     margin-top: 28px;
+
+    @media (min-width: 0px) and (max-width: 1160px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    @media (min-width: 692px) and (max-width: 1160px) {
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    @media (min-width: 0px) and (max-width: 691px) {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      max-width: 159px;
+      text-align: center;
+    }
   }
 
   &_price {
@@ -30,7 +51,13 @@
     font-size: 16px;
     line-height: 22px;
     color: #1e0606;
+
+    @media (min-width: 692px) and (max-width: 1160px) {
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
+
   &_learn-more {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
@@ -50,7 +77,28 @@
     width: 207px;
     height: 207px;
     background-color: #e5eaf8;
+
+    @media (min-width: 692px) and (max-width: 882px) {
+      top: 43px;
+      left: 42px;
+      width: 129px;
+      height: 129px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @media (min-width: 0px) and (max-width: 691px) {
+      top: 32px;
+      left: 31px;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      font-size: 13px;
+      line-height: 20px;
+    }
   }
+
   &_link {
     outline: none;
   }
@@ -60,17 +108,20 @@
     opacity: 0.9;
     cursor: pointer;
   }
-  
+
   &_link:active &_learn-more {
     opacity: 0.67;
     cursor: pointer;
   }
+
+  &_img {
+    @media (min-width: 692px) and (max-width: 882px) {
+      width: 203px;
+      height: 211px;
+    }
+    @media (min-width: 0px) and (max-width: 691px) {
+      width: 160px;
+      height: 167px;
+    }
+  }
 }
-
-
-
-
-
-
-
-

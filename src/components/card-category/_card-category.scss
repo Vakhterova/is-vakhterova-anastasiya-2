@@ -1,5 +1,5 @@
 div .card-category__text_mobile {
-  @media (min-width: 0px) and (max-width: 694px) {
+  @media (min-width: 0px) and (max-width: 767px) {
     font-size: 26px;
     line-height: 32px;
     top: 115px;
@@ -14,14 +14,14 @@ div .card-category__text_mobile {
     text-align: center;
     align-items: center;
     position: absolute;
-    top: 119px;
+    top: 124px;
     left: 126px;
     transform: translate(-50%, -50%);
   }
 }
 
 .card-category {
-  padding-right: 10px;
+
   position: relative;
 
   @media (min-width: 811px) and (max-width: 1160px) {
@@ -30,6 +30,10 @@ div .card-category__text_mobile {
 
   @media (min-width: 768px) and (max-width: 810px) {
     padding-right: 20px;
+  }
+
+  @media (min-width: 0px) and (max-width: 767px) {
+    margin-right: 16px;
   }
 
   &__img {
@@ -42,8 +46,20 @@ div .card-category__text_mobile {
       width: 247px;
       height: 238px;
     }
+
     &_size {
-      @media (min-width: 695px) and (max-width: 1184px) {
+
+      @media (min-width: 1087px) and (max-width: 1180px) {
+        width: 265px; 
+        height: 255px;
+      }
+
+      @media (min-width: 769px) and (max-width: 1086px) {
+        width: 280px;
+        height: 270px;
+      }
+
+      @media (min-width: 695px) and (max-width: 768px) {
         width: 203px;
         height: 196px;
       }
@@ -52,6 +68,8 @@ div .card-category__text_mobile {
         width: 160px;
         height: 155px;
       }
+
+
     }
   }
 
@@ -68,15 +86,22 @@ div .card-category__text_mobile {
     text-align: center;
     align-items: center;
     position: absolute;
-    top: 133px;
+    top: 134px;
     left: 140px;
     transform: translate(-50%, -50%);
 
-    @media (min-width: 695px) and (max-width: 1160px) {
-      font-size: 24px;
-      line-height: 29px;
-      top: 127px;
-      left: 127px;
+    @media (min-width: 811px) and (max-width: 1160px) {
+      font-size: 26px;
+      line-height: 32px;
+      top: 133px;
+      left: 140px;
+    }
+
+    @media (min-width: 768px) and (max-width: 810px) {
+      font-size: 26px;
+      line-height: 32px;
+      top: 125px;
+      left: 130px;
     }
   }
 }
@@ -107,17 +132,36 @@ div .card-category__text_mobile {
   left: 140px;
   transform: translate(-50%, -50%);
 
-  @media (min-width: 695px) and (max-width: 1160px) {
+  @media (min-width: 769px) and (max-width: 900px) {
     font-size: 24px;
     line-height: 29px;
-    top: 96px;
+    top: 139px;
+    left: 137px;
+  }
+
+  @media (min-width: 695px) and (max-width: 768px) {
+    font-size: 24px;
+    line-height: 29px;
+    top: 101px;
     left: 103px;
   }
+
 
   @media (min-width: 0px) and (max-width: 694px) {
     font-size: 18px;
     line-height: 22px;
-    top: 80px;
-    left: 82px;
+    top: 77px;
+    left: 81px;
   }
+
+
+}
+
+.card-category__link:hover .card-category__category_text,.card-category__link:focus .card-category__category_text {
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.card-category__link:focus {
+  outline: none;
 }

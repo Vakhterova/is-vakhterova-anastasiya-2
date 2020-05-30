@@ -1,12 +1,12 @@
 /*main blok, blogs*/
 
-.blog-article {
+.blog__article {
   display: flex;
   margin-left: -10px;
   margin-right: -10px;
 }
 
-.blog-list {
+.blog__list {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -14,7 +14,7 @@
   margin-top: 0px;
 }
 
-.pages-block {
+.selector {
   display: flex;
   justify-content: space-between;
   margin-bottom: 44px;

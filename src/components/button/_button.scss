@@ -41,7 +41,7 @@ div .button {
 }
 
 .poster-link {
-  width: 161px;
+  min-width: 161px;
   min-height: 40px;
   margin-left: 133px;
   margin-bottom: 89px;
@@ -54,7 +54,7 @@ div .button {
 
   @media (min-width: 0px) and (max-width: 767px) {
     margin-left: 20px;
-    width: 142px;
+    min-width: 142px;
     min-height: 36px;
     margin-bottom: 188px;
   }

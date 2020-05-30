@@ -15,152 +15,154 @@
   }  
 
   @media (min-width:0px) and (max-width:694px) {
-    width: 335px;
+    max-width: 335px;
     padding: 5px 25px 25px;
   } 
-}
 
-.form-label {
-  font-size: 14px;
-  line-height: 16px;
-  margin-top: 20px;                       
-  margin-bottom: 1px;
-  color: #1e0606;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  cursor: pointer;
-}
 
-.form-input {
-  line-height: 47px;
-  border: 2px solid rgba(0, 0, 0, 0.2);       
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  color: #1e0606;
-  padding-left: 20px;
-  margin-top: 6px;
-  transition:border .4s;
-
-  @media (min-width:0px) and (max-width:694px) {
+  &__form-label {
     font-size: 14px;
-    line-height: 40px;
-    padding-left: 15px;
-  } 
-}
+    line-height: 16px;
+    margin-top: 20px;                       
+    margin-bottom: 1px;
+    color: #1e0606;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    cursor: pointer;
+  }
+  
+  &__form-input {
+    line-height: 47px;
+    border: 2px solid rgba(0, 0, 0, 0.2);       
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #1e0606;
+    padding-left: 20px;
+    margin-top: 6px;
+    transition:border .4s;
 
-.modal-window__checkbox {
-  margin-bottom: 20px;                
-  border: 0 none;
-  padding: 0px;
-}
+    &:hover, &:focus {              
+      border: 2px solid rgba(0, 0, 0, 0.3);
+    }
+    
+    &:active {
+      border: 2px solid rgba(0, 0, 0, 0.2);       
+    }
+    
+    &:focus {             
+      outline: none;
+    }
+  
+    @media (min-width:0px) and (max-width:694px) {
+      font-size: 14px;
+      line-height: 40px;
+      padding-left: 15px;
+    } 
+  }
+  
+  &__checkbox {
+    margin-bottom: 20px;                
+    border: 0 none;
+    padding: 0px;
+  }
 
-.textarea-massage {
-  height: 150px;                            
-  margin-top: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  transition: border .4s;
-}
 
-.modal-window__textarea {
-  display: flex;
-  flex-direction: column;    
-  margin-bottom: 22px;
-}
-
-.modal-window__row {               
-  display: flex;
-  justify-content: space-between;
-
-  @media (min-width:0px) and (max-width:694px) {
+  &__textarea {
     display: flex;
+    flex-direction: column;    
+    margin-bottom: 22px;
+  
+    &-massage{
+      height: 150px;                            
+      margin-top: 6px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      transition: border .4s;
+  
+      &:hover, &:focus {        
+        border: 2px solid rgba(0, 0, 0, 0.3);
+      }
+      
+      &:active {                       
+        border: 2px solid rgba(0, 0, 0, 0.2);
+      }
+      
+      &:focus {            
+        outline: none;
+      }
+    }
+  }
+
+  &__checkbox-indicator {
+    padding-right: 32px;       
+    position: relative;
+  
+    &::before {    
+      content: "";
+      width: 19px;
+      height: 19px;
+      border: 2px solid #c29974;
+      box-sizing: border-box;
+      border-radius: 3px;
+      display: block;
+      left: 0px;
+      left: -3px;
+      top: -4px;
+      position: absolute;
+    }
+    
+  }
+  
+  &__column {
+    display: flex;                     
     flex-direction: column;
-  } 
+    width: 290px;
+  
+    @media (min-width:695px) and (max-width:819px) {
+      width: 258px;
+    }  
+  
+    @media (min-width:0px) and (max-width:694px) {
+      width: 285px;
+    } 
+  
+    &-width_600 {            
+      display: flex;
+      flex-direction: column;
+      width: 600px;
+    
+      @media (min-width:695px) and (max-width:819px) {
+        width: 536px;
+      }  
+    
+      @media (min-width:0px) and (max-width:694px) {
+        width: 285px;
+      } 
+    }
+    
+  }
+
+  &__row {               
+    display: flex;
+    justify-content: space-between;
+  
+    @media (min-width:0px) and (max-width:694px) {
+      display: flex;
+      flex-direction: column;
+    } 
+  }
+
 }
 
-.modal-window__column {
-  display: flex;                     
-  flex-direction: column;
-  width: 290px;
 
-  @media (min-width:695px) and (max-width:819px) {
-    width: 258px;
-  }  
-
-  @media (min-width:0px) and (max-width:694px) {
-    width: 285px;
-  } 
-}
-
-.modal-window__column_100 {            
-  display: flex;
-  flex-direction: column;
-  width: 600px;
-
-  @media (min-width:695px) and (max-width:819px) {
-    width: 536px;
-  }  
-
-  @media (min-width:0px) and (max-width:694px) {
-    width: 285px;
-  } 
-}
-
-.form-input:hover, .form-input:focus {              
-  border: 2px solid rgba(0, 0, 0, 0.3);
-}
-
-.form-input:active {
-  border: 2px solid rgba(0, 0, 0, 0.2);       
-}
-
-.form-input:focus {             
-  outline: none;
-}
-
-.textarea-massage:hover, .textarea-massage:focus {        
-  border: 2px solid rgba(0, 0, 0, 0.3);
-}
-
-.textarea-massage:active {                       
-  border: 2px solid rgba(0, 0, 0, 0.2);
-}
-
-.textarea-massage:focus {            
-  outline: none;
-}
-
-.checkbox-margin {           
-  margin-right: 15px;
-}
 
 /*checkbox */
 
-.checkbox_indicator {
-  padding-right: 32px;       
-  position: relative;
-}
 
-
-.checkbox_indicator::before {    
-  content: "";
-  width: 19px;
-  height: 19px;
-  border: 2px solid #c29974;
-  box-sizing: border-box;
-  border-radius: 3px;
-  display: block;
-  left: 0px;
-  left: -3px;
-  top: -4px;
-  position: absolute;
-}
-
-
-.form-input:checked ~ .checkbox_indicator::after {     
+.modal-window__form-input:checked ~ .modal-window__checkbox-indicator::after {     
   content: "";
   background-image: url(/static//images/checked.svg);
   position: absolute;
@@ -170,6 +172,6 @@
   margin-top: -1px;
 }
 
-.form-input:checked ~ .filter-item-text,.form-input:hover ~ .filter-item-text,.form-input:focus ~ .filter-item__text {
+.modal-window__form-input:checked ~ .filter-item-text,.modal-window__form-input:hover ~ .filter-item-text,.modal-window__form-input:focus ~ .filter-item__text {
   text-decoration-line: underline;      
 }

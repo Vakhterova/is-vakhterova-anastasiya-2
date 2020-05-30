@@ -2,63 +2,70 @@
 <html lang="en">
   <head>
     <meta charset=UTF-8>
-    <title>Animation</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400i,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/common.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Animation page </title> 
+    <meta name="description" content ="The page with an animation shows the family that trying get a taxi on the road." >
+    <meta name="keywords" content="animation">
   </head>
 
   <body>
     @@include('header/index.html')
     <main class="container">
       <h1 class="animation-title"> Animation scene </h1>
-      <div class="animation-breadcrumbs">
-        <ol class="breadcrumbs hidden-marker">
+      <div class="breadcrumbs">
+        <ol class="breadcrumbs__list hidden-marker">
           <li>
-            <a class="breadcrumbs__item" href="/index.html"> Home </a>
+            <a class="breadcrumb__item" href="/index.html"> Home </a>
           </li>
           <li>
-            <img class="breadcrumbs__item" src="/static/images/bread.svg" alt="&#62;">
+            <img class="breadcrumb__item" src="/static/images/bread.svg" alt="&#62;">
           </li>
-          <li class="breadcrumbs__item breadcrumbs__item_active"> Animation </li>
+          <li class="breadcrumb__item breadcrumb__item_active"> Animation </li>
         </ol>
       </div>
-      <div class="animation-block"> 
-        <div class="clouds"> </div>
-        <div class="buildings"> </div>
-        <div class="road_1 "> </div>
-        <div class="car_1"> </div>
-        <div class="car_2"> </div>
-        <div class="car_3"> </div>
-        <div class="car_4"> </div>
-        <div class="lantern_1"> </div>
-        <div class="lantern_2"> </div>
-        <div class="road_2"> </div>
-        <div class="taxi-car"> </div>
-        <img class="taxi-massage" src="/static/images/animation/message3.png" alt="Я вообще-то не за Вами!">
-        <div class="stone_1"> </div>
-        <div class="stone_2"> </div>
-        <div class="stone_3"> </div>
-        <div class="stone_4"> </div>
-        <div class="stone_5"> </div>
-        <div class="stone_6"> </div>
-        <div class="stone_7"> </div>
-        <div class="stone_8"> </div>
-        <div class="stone_9"> </div>
-        <div class="stone_10"> </div>
-        <div class="stone_11"> </div>
-        <div class="lantern"> </div>
-        <img class="woman-body" src="/static/images/animation/bodyW.png" alt="body">
-        <img class="woman-hand" src="/static/images/animation/handW.png" alt="hand">
-        <img class="woman-massage" src="/static/images/animation/message1.png" alt="Джесси,такси едет!">
-        <img class="man-body" src="/static/images/animation/bodyM.png" alt="body">
-        <img class="man-hand" src="/static/images/animation/handM.png" alt="hand">
-        <img class="man-massage" src="/static/images/animation/message2.png" alt="Эй, такси!">
-        <img class="man-massage_2" src="/static/images/animation/message4.png" alt="Ок, ждем еще!">
-        <img class="suitcases" src="/static/images/animation/suitcase.png" alt="suitcase">
+      <div class="animation"> 
+        <div class="animation__clouds"> </div>
+        <div class="animation__buildings"> </div>
+        <div class="animation__road-1 "> </div>
+        <div class="animation__car-1"> </div>
+        <div class="animation__car-2"> </div>
+        <div class="animation__car-3"> </div>
+        <div class="animation__car-4"> </div>
+        <div class="animation__lantern-1"> </div>
+        <div class="animation__lantern-2"> </div>
+        <div class="animation__road-2"> </div>
+        <div class="animation__taxi-car"> </div>
+        <div class="animation__taxi-massage"> </div>
+        <div class="animation__stone-1"> </div>
+        <div class="animation__stone-2"> </div>
+        <div class="animation__stone-3"> </div>
+        <div class="animation__stone-4"> </div>
+        <div class="animation__stone-5"> </div>
+        <div class="animation__stone-6"> </div>
+        <div class="animation__stone-7"> </div>
+        <div class="animation__stone-8"> </div>
+        <div class="animation__stone-9"> </div>
+        <div class="animation__stone-10"> </div>
+        <div class="animation__stone-11"> </div>
+        <div class="animation__lantern"> </div>
+        <div class="animation__woman-body"> </div>
+        <div class="animation__woman-hand"> </div>
+        <div class="animation__woman-massage"> </div>
+        <div class="animation__man-body"> </div>
+        <div class="animation__man-hand"> </div>
+        <div class="animation__man-massage"> </div>
+        <div class="animation__man-massage-2"> </div>
+        <div class="animation__suitcases"> </div>
       </div>
     </main>
     @@include('footer/index.html')
+    <script src="index.js"></script>
   </body>
 
 </html>

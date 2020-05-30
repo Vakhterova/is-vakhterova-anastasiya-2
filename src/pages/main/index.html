@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Главная</title>
+    <title>DLK: Curated goods from fashion to furniture for kids and adults. </title>
+    <meta name="description" content ="Modern finds for the modern home. Our company produces the best goods and apparel for everyone. Deliver goods to anywhere in the world, provide a guarantee on the quality of goods." >
+    <meta name="keywords" content="DLK company, sell the products for home and your needs">
   </head>
   <body>
   @@include('header/index.html')
@@ -23,7 +25,7 @@
             <div class="poster__text"> Designed in Slovenia </div>
             <div class="poster__page"> 01 </div>
             <div class="poster__buttons">
-              <button class="poster__button active-block"> </button>
+              <button class="poster__button poster__button_active-block"> </button>
               <button class="poster__button"> </button>
               <button class="poster__button"> </button>
               <button class="poster__button"> </button>
@@ -32,7 +34,10 @@
               "text": "EXPLORE NOW",
               "class": "poster-link poster-link_js"
             })
-            <img class="poster__img" src="/static/images/poster.png" alt="POSTER">
+            <picture>
+                <source srcset="/static/images/poster.mobile.png"  media="(min-width:0px) and (max-width:767px)">       
+                <img class="poster__img" src="/static/images/poster.png" alt="POSTER">
+              </picture>
             <div class="poster__underpost-text">
             Free (continental) USA shipping on all orders of $100 USD or more!
             </div>
@@ -41,42 +46,42 @@
       </section>
       <section class="category">
         <h2 class="category__title container">Category Products</h2>
-        <div class="container category-container">
+        <div class="container category__container">
           <ul class="hidden-marker category__list">
             @@include('card-category/index.html', {
               "text": "Apparel kids",
-              "imgName": "category-1.jpg",
+              "imgName": "category1.jpg",
               "class2" : "card-category__img",
               "class3" : " card-category__text card-category__text_mobile"
             })
             @@include('card-category/index.html', {
               "text": "Holiday shop",
-              "imgName": "category-2.jpg",
+              "imgName": "category2.jpg",
               "class2" : "card-category__img",
               "class3" : " card-category__text card-category__text_mobile"
             })
             @@include('card-category/index.html', {
               "text": "Toys",
-              "imgName": "category-3.jpg",
+              "imgName": "category3.jpg",
               "link": "/pages/toys/index.html",
               "class2" : "card-category__img",
               "class3" : "card-category__text card-category__text_mobile"
             })
             @@include('card-category/index.html', {
               "text": "Accessories",
-              "imgName": "category-4.jpg",
+              "imgName": "category4.jpg",
               "class2" : "card-category__img",
               "class3" : "card-category__text card-category__text_mobile"
             })
           </ul>
             <div class="category__button">
-              <button class="category__button_list">
-                <img class="button-change" src="/static/images/back.svg" alt="back">
+              <button class="category__button-list_back">
+                <img class="category__button-change-img" src="/static/images/back.svg" alt="back">
               </button>
-              <button class="category__button_list">
-                <img class="button-change" src="/static/images/next.svg" alt="next">
+              <button class="category__button-list_next">
+                <img class="category__button-change-img" src="/static/images/next.svg" alt="next">
               </button>
-              <p class="block-text category-text">
+              <p class="category__button-text category-text">
                 Modern finds for the modern home. Curated goods by unique designers around the world
                 from fashion to furniture for kids and adults.
               </p>
@@ -86,24 +91,23 @@
       </section>
       <section class="slider container">
         <h2 class="visually-hidden">DELIVERY</h2>
-
       <picture>
-      <source srcset="/static/images/delivery.ipad.jpg , /static/images/delivery.ipad2x.jpg  2x"  media="(min-width:768px) and (max-width:1200px)">
-        <source srcset="/static/images/delivery.mobile.png , /static/images/delivery.mobile2x.jpg  2x"  media="(min-width:0px) and (max-width:767px)">       
-        <img class="slider-img" srcset="/static/images/delivery.jpg, /static/images/delivery2x.jpg 2x"  alt="delivery">
+      <source srcset="/static/images/delivery.ipad.jpg , /static/images/delivery.ipad2x.jpg  2x"  media="(min-width:700px) and (max-width:1000px)">
+        <source srcset="/static/images/delivery.mobile.png , /static/images/delivery.mobile2x.jpg  2x"  media="(min-width:0px) and (max-width:699px)">       
+        <img class="slider__img" srcset="/static/images/delivery.jpg, /static/images/delivery2x.jpg 2x"  alt="delivery">
       </picture>
-        <div class="slider-block">
-          <div class="main-category__title slider-title"> Delivery</div>
-          <div class="slider-button">
-            <button class="slider-button__item  slider-button__item_active">Delivery </button>
-            <button class="slider-button__item  slider-button__item_mb">Guarantee </button>
-            <button class="slider-button__item slider-button__item_mt">Credit </button>
+        <div class="slider__block">
+          <div class="slider__title"> Delivery</div>
+          <div class="slider__buttons">
+            <button class="slider__button-item  slider__button-item_active">Delivery </button>
+            <button class="slider__button-item  slider__button-item_mb">Guarantee </button>
+            <button class="slider__button-item slider__button-item_mt">Credit </button>
           </div>
-          <p class="block-text slider-text">
+          <p class="slider__text">
             Some days i feel like i've been working on dlk my entire life and there are other days that i am completely
             shocked that four years have flown by. It's simply magical.
           </p>
-          <p class="block-text slider-text">
+          <p class="slider__text">
             What started as an outlet to deal with the traumatic loss of my husband, dlk has now become a truly happy
             place for me and i have you and all of the beautiful designers that we work with to thank!
           </p>
@@ -179,6 +183,8 @@
       </form>
     </div>
     <script src="index.js"></script>
-    <script src="header/index.js"></script>
+    <audio autoplay class="audio-site" >
+      <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Dee_Yan-Key/Requiem_for_String_Quartet_in_C_minor/Dee_Yan-Key_-_05_-_sanctus.mp3" type="audio/mpeg">
+    </audio>
 </body>
 </html>

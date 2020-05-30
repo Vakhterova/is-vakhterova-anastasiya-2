@@ -1,4 +1,4 @@
-.animation-block {
+.animation {
   position: relative;
   width: 1400px;
   height: 784px;
@@ -6,9 +6,412 @@
   overflow: hidden;
   margin-left: -109px;
 
-  @media (min-width:768px) and (max-width:1400px) {
-  width: 100%;
-    } 
+  &__clouds {
+    position: absolute;
+    background-image: url("/static/images/animation/clouds.png");
+    min-width: 1341.8px;
+    height: 134.85px;
+    left: 89px;
+    top: 8px;
+  }
+
+  &__buildings {
+    background-image: url("/static/images/animation/buildings.png");
+    position: absolute;
+    background-position: -43.79%;
+    min-width: 1542px;
+    height: 359px;
+    left: -143px;
+    top: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__taxi-car {
+    position: absolute;
+    background-image: url("/static/images/animation/car.png");
+    width: 888px;
+    height: 266px;
+    left: 1500px;
+    top: 407px;
+    z-index: 2;
+    opacity: 0;
+    animation: taxi-car 15s infinite;
+    animation-delay: 2s;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__taxi-massage {
+    position: absolute;
+    background-image: url("/static/images/animation/message3.png");
+    width: 160.5px;
+    height: 99px;
+    left: 866px;
+    top: 355px;
+    opacity: 0;
+    animation: taxi-message 15s infinite;
+    animation-delay: 7s;
+    z-index: 3;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__car-1 {
+    background-image: url("/static/images/animation/car1.png");
+    position: absolute;
+    width: 250px;
+    height: 99px;
+    left: -253px;
+    top: 433px;
+    z-index: 1;
+    animation: animation-car1 15s infinite;
+    opacity: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__car-2 {
+    background-image: url("/static/images/animation/car2.png");
+    width: 205px;
+    height: 97px;
+    position: absolute;
+    left: -265px;
+    top: 432px;
+    z-index: 1;
+    animation: animation-car2 15s infinite;
+    opacity: 1;
+    animation-delay: 1.5s;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__car-3 {
+    background-image: url("/static/images/animation/car3.png");
+    width: 247px;
+    height: 66px;
+    position: absolute;
+    left: -253px;
+    top: 447px;
+    z-index: 1;
+    animation: animation-car3 15s infinite;
+    opacity: 1;
+    animation-delay: 3.5s;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__car-4 {
+    background-image: url("/static/images/animation/car4.png");
+    width: 269px;
+    height: 126px;
+    left: -270px;
+    top: 419px;
+    position: absolute;
+    z-index: 1;
+    animation: animation-car4 15s infinite;
+    opacity: 1;
+    animation-delay: 6s;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__lantern {
+    background-image: url("/static/images/animation/lantern.png");
+    width: 214.32px;
+    height: 562.56px;
+    position: absolute;
+    left: 1028px;
+    top: 171px;
+    z-index: 4;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__lantern-1 {
+    background-image: url("/static/images/animation/lanterns.png");
+    background-position: 1.21%;
+    width: 150px;
+    height: 391px;
+    position: absolute;
+    left: 433px;
+    top: 181px;
+    z-index: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__lantern-2 {
+    background-image: url("/static/images/animation/lanterns.png");
+    width: 151px;
+    height: 393px;
+    left: 1307px;
+    top: 182px;
+    z-index: 1;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__road-1 {
+    background-image: url("/static/images/animation/road1.png");
+    min-width: 1521px;
+    height: 86px;
+    position: absolute;
+    left: -122px;
+    top: 469px;
+    z-index: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__road-2 {
+    background-image: url("/static/images/animation/road2.png");
+    min-width: 63vw;
+    min-width: 1521px;
+    height: 97.7px;
+    position: absolute;
+    top: 597px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__stone-1 {
+    position: absolute;
+    background-image: url("/static/images/animation/stones1.png");
+    width: 377.36px;
+    height: 33.83px;
+    left: 116px;
+    top: 716px;
+    z-index: 2;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__stone-2 {
+    position: absolute;
+    background-image: url("/static/images/animation/stones2.png");
+    width: 167.63px;
+    height: 28.04px;
+    left: 523px;
+    top: 741px;
+    z-index: 3;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__stone-3 {
+    position: absolute;
+    background-image: url("/static/images/animation/stones3.png");
+    width: 34.59px;
+    height: 10.63px;
+    left: 656px;
+    top: 713px;
+    z-index: 3;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__stone-4 {
+    position: absolute;
+    background-image: url("/static/images/animation/stones4.png");
+    width: 35.01px;
+    height: 14.02px;
+    left: 142px;
+    top: 761px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__stone-5 {
+    position: absolute;
+    background-image: url("/static/images/animation/stones5.png");
+    width: 22.32px;
+    height: 11.15px;
+    left: 61px;
+    top: 715px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__stone-6 {
+    position: absolute;
+    background-image: url("/static/images/animation/stones6.png");
+    width: 225px;
+    height: 35px;
+    left: 774px;
+    top: 726px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__stone-7 {
+    position: absolute;
+    background-image: url("/static/images/animation/stones7.png");
+    width: 38px;
+    height: 15px;
+    left: 1029px;
+    top: 743px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__stone-8 {
+    position: absolute;
+    background-image: url("/static/images/animation/stones8.png");
+    width: 73px;
+    height: 26px;
+    left: 1263px;
+    top: 719px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__stone-9 {
+    position: absolute;
+    background-image: url("/static/images/animation/stones9.png");
+    width: 74px;
+    height: 25px;
+    left: 35px;
+    top: 749px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__stone-10 {
+    position: absolute;
+    background-image: url("/static/images/animation/stones10.png");
+    width: 36px;
+    height: 13px;
+    left: 1216px;
+    top: 749px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__stone-11 {
+    position: absolute;
+    background-image: url("/static/images/animation/stones11.png");
+    background-position: -0.79%;
+    width: 14px;
+    height: 26px;
+    left: 1391px;
+    top: 724px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__woman-body {
+    position: absolute;
+    background-image: url("/static/images/animation/bodyW.png");
+    width: 98px;
+    height: 268px;
+    left: 181px;
+    top: 464px;
+    z-index: 2;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__woman-hand {
+    position: absolute;
+    background-image: url("/static/images/animation/handW.png");
+    width: 100px;
+    height: 47px;
+    left: 206px;
+    top: 580px;
+    z-index: 2;
+    transform-origin: top left;
+    transform: rotate(-7deg);
+    animation: woman-hand 15s infinite;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__woman-massage {
+    position: absolute;
+    background-image: url("/static/images/animation/message1.png");
+    width: 160px;
+    height: 99px;
+    left: 88px;
+    top: 357px;
+    opacity: 0;
+    animation: woman-massage 15s infinite;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__man-body {
+    position: absolute;
+    background-image: url("/static/images/animation/bodyM.png");
+    width: 214.64px;
+    height: 355px;
+    left: 288px;
+    top: 377px;
+    z-index: 4;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__man-hand {
+    position: absolute;
+    background-image: url("/static/images/animation/handM.png");
+    width: 108px;
+    height: 128px;
+    left: 305px;
+    top: 310px;
+    z-index: 3;
+    transform: rotate(154deg);
+    transform-origin: bottom left;
+    animation: man-hand 15s infinite;
+    animation-delay: 3s;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__man-massage {
+    position: absolute;
+    background-image: url("/static/images/animation/message2.png");
+    width: 160px;
+    height: 77px;
+    left: 276px;
+    top: 293px;
+    max-width: 166px;
+    opacity: 0;
+    animation: man-message 15s infinite;
+    animation-delay: 3.5s;
+    z-index: 3;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__man-massage-2 {
+    position: absolute;
+    background-image: url("/static/images/animation/message4.png");
+    width: 160px;
+    height: 77px;
+    left: 276px;
+    top: 293px;
+    max-width: 166px;
+    opacity: 0;
+    animation: man-message 15s infinite;
+    animation-delay: 10s;
+    z-index: 3;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__suitcases {
+    background-image: url("/static/images/animation/suitcase.png");
+    width: 191px;
+    height: 95.46px;
+    position: absolute;
+    left: 172px;
+    top: 637px;
+    z-index: 4;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 .animation-title {
@@ -22,338 +425,19 @@
   margin-bottom: 7px;
 }
 
-.clouds {
-  position: absolute;
-  background-image: url("http://localhost:3000/static/images/animation/clouds.png");
-  min-width: 1341.8px;
-  height: 134.85px;
-  left: 89px;
-  top: 8px;
-}
-
-.buildings {
-  background-image: url("http://localhost:3000/static/images/animation/buildings.png");
-  position: absolute;
-  background-position: -43.79%;
-  min-width: 1542px;
-  height: 359px;
-  left: -143px;
-  top: 100px;
-}
-
-.taxi-car{
-  position: absolute;
-  background-image: url("http://localhost:3000/static/images/animation/car.png");
-  width: 888px;
-  height: 266px;
-  left: 1500px;
-  top: 407px;
-  z-index: 2;
-  opacity:0 ;
-  animation: taxi-car 15s infinite ;
-  animation-delay: 2s;
-}
-
-.taxi-massage {
-  position: absolute;
-  left: 866px;
-  top: 355px;
-  opacity:0 ;
-  animation: taxi-message 15s infinite;
-  animation-delay: 7s;
-  z-index: 3;
-}
-
-.car_1 {
-  background-image: url("http://localhost:3000/static/images/animation/car1.png");
-  position: absolute;
-  width: 250px;
-  height: 99px;
-  left: -253px;
-  top: 433px;
-  z-index: 1;
-  animation: animation-car1 15s infinite;
-  opacity: 0;
-}
-
-.car_2 {
-  background-image: url("http://localhost:3000/static/images/animation/car2.png");
-  width: 205px;
-  height: 97px;
-  position: absolute;
-  left: -265px;
-  top: 432px;
-  z-index: 1;
-  animation: animation-car2 15s infinite;
-  opacity: 1;
-  animation-delay: 1.5s;
-}
-
-.car_3 {
-  background-image: url("http://localhost:3000/static/images/animation/car3.png");
-  width: 247px;
-  height: 66px;
-  position: absolute;
-  left: -253px;
-  top: 447px;
-  z-index: 1;
-  animation: animation-car3 15s infinite;
-  opacity: 1;
-  animation-delay: 3.5s;
-}
-
-.car_4 {
-  background-image: url("http://localhost:3000/static/images/animation/car4.png");
-  width: 269px;
-  height: 126px;
-  left: -270px;
-  top: 419px;
-  position: absolute;
-  z-index: 1;
-  animation: animation-car4 15s infinite;
-  opacity: 1;
-  animation-delay: 6s;
-}
-
-.lantern {
-  background-image: url("http://localhost:3000/static/images/animation/lantern.png");
-  width: 214.32px;
-  height: 562.56px;
-  position: absolute;
-  left: 1028px;
-  top: 171px;
-  z-index: 4;
-}
-
-.lantern_1 {
-  background-image: url("http://localhost:3000/static/images/animation/lanterns.png");
-  background-position: 1.21%;
-  width: 150px;
-  height: 391px;
-  position: absolute;
-  left: 433px;
-  top: 181px;
-  z-index: 1;
-}
-
-.lantern_2 {
-  background-image: url("http://localhost:3000/static/images/animation/lanterns.png");
-  width: 151px;
-  height: 393px;
-  left: 1307px;
-  top: 182px;
-  z-index: 1;
-  position: absolute;
-}
-
-.road_1 {
-  background-image: url("http://localhost:3000/static/images/animation/road1.png");
-  min-width: 1521px;
-  height: 86px;
-  position: absolute;
-  left: -122px;
-  top: 469px;
-  z-index: 1;
-}
-
-.road_2 {
-  background-image: url("http://localhost:3000/static/images/animation/road2.png");
-  min-width: 1521px;
-  height: 97.7px;
-  left: -122px;
-  position: absolute;
-  top: 597px;
-}
-
-.stone_1 {
-  position: absolute;
-  background-image: url("http://localhost:3000/static/images/animation/stones1.png");
-  width: 377.36px;
-  height: 33.83px;
-  left: 116px;
-  top: 716px;
-  z-index: 2;
-}
-
-.stone_2 {
-  position: absolute;
-  background-image: url("http://localhost:3000/static/images/animation/stones2.png");
-  width: 167.63px;
-  height: 28.04px;
-  left: 523px;
-  top: 741px;
-  z-index: 3;
-}
-
-.stone_3 {
-  position: absolute;
-  background-image: url("http://localhost:3000/static/images/animation/stones3.png");
-  width: 34.59px;
-  height: 10.63px;
-  left: 656px;
-  top: 713px;
-  z-index: 3;
-}
-
-.stone_4 {
-  position: absolute;
-  background-image: url("http://localhost:3000/static/images/animation/stones4.png");
-  width: 35.01px;
-  height: 14.02px;
-  left: 142px;
-  top: 761px;
-}
-
-.stone_5 {
-  position: absolute;
-  background-image: url("http://localhost:3000/static/images/animation/stones5.png");
-  width: 22.32px;
-  height: 11.15px;
-  left: 61px;
-  top: 715px;
-}
-
-.stone_6 {
-  position: absolute;
-  background-image: url("http://localhost:3000/static/images/animation/stones6.png");
-  width: 225px;
-  height: 35px;
-  left: 774px;
-  top: 726px;
-}
-
-.stone_7 {
-  position: absolute;
-  background-image: url("http://localhost:3000/static/images/animation/stones7.png");
-  width: 38px;
-  height: 15px;
-  left: 1029px;
-  top: 743px;
-}
-
-.stone_8 {
-  position: absolute;
-  background-image: url("http://localhost:3000/static/images/animation/stones8.png");
-  width: 73px;
-  height: 26px;
-  left: 1263px;
-  top: 719px;
-}
-
-.stone_9 {
-  position: absolute;
-  background-image: url("http://localhost:3000/static/images/animation/stones9.png");
-  width: 74px;
-  height: 25px;
-  left: 35px;
-  top: 749px;
-}
-
-.stone_10 {
-  position: absolute;
-  background-image: url("http://localhost:3000/static/images/animation/stones10.png");
-  width: 36px;
-  height: 13px;
-  left: 1216px;
-  top: 749px;
-}
-
-.stone_11 {
-  position: absolute;
-  background-image: url("http://localhost:3000/static/images/animation/stones11.png");
-  background-position: -0.79%;
-  width: 14px;
-  height: 26px;
-  left: 1391px;
-  top: 724px;
-}
-
-.woman-body {
-  position: absolute;
-  left: 181px;
-  top: 464px;
-  z-index: 2;
-}
-
-.woman-hand{
-  position: absolute;
-  left: 206px;
-  top: 580px;
-  z-index: 2;
-  transform-origin: top left;
-  transform: rotate(-7deg);
-  animation: woman-hand 15s infinite;
-}
-
-.woman-massage {
-  position: absolute;
-  left: 88px;
-  top: 357px;
-  opacity:0 ;
-  animation: woman-massage 15s infinite;
-}
-
-.man-body{
-  position: absolute;
-  left: 288px;
-  top: 377px;
-  z-index: 4;
-}
-
-.man-hand {
-  position: absolute;
-  left: 305px;
-  top: 310px;
-  z-index: 3;
-  transform: rotate(154deg);
-  transform-origin: bottom left;
-  animation:  man-hand 15s infinite;
-  animation-delay: 3s;
-}
-
-.man-massage {
-  position: absolute;
-  left: 276px;
-  top: 293px;
-  max-width: 166px;
-  opacity:0 ;
-  animation: man-message 15s infinite;
-  animation-delay: 3.5s;
-  z-index: 3;
-}
-
-.man-massage_2 {
-  position: absolute;
-  left: 276px;
-  top: 293px;
-  max-width: 166px;
-  opacity:0 ;
-  animation: man-message 15s infinite;
-  animation-delay: 10s;
-  z-index: 3;
-}
-
-.suitcases{
-  position: absolute;
-  left: 172px;
-  top: 637px;
-  z-index: 3;
-}
-
 @keyframes woman-massage {
   from {
-    opacity:0 ;
+    opacity: 0;
   }
 
   13% {
-    opacity:1 ;
+    opacity: 1;
   }
 
   20% {
-    opacity:0 ;
+    opacity: 0;
   }
 }
-
 
 @keyframes woman-hand {
   from {
@@ -397,47 +481,49 @@
   }
 }
 
-
-@keyframes man__massage_2 {
+@keyframes man-massage-2 {
   from {
     opacity: 0;
   }
 
   95% {
     opacity: 1;
-    }
+  }
 
   97% {
     opacity: 0;
   }
-
 }
 
 @keyframes taxi-car {
-  from, to {  
-    opacity:0 ;
+  from,
+  to {
+    opacity: 0;
     left: 1500px;
   }
 
-  0%, 1% {
-    opacity:1 ;
+  0%,
+  1% {
+    opacity: 1;
     left: 1460px;
   }
 
-  40%,50%,60% {
-    opacity:1 ;
-    left: 554px
+  40%,
+  50%,
+  60% {
+    opacity: 1;
+    left: 554px;
   }
 
-    96% {
-    opacity:1 ;
-    left:-950px;
+  96% {
+    opacity: 1;
+    left: -950px;
     z-index: 1;
   }
 
   99% {
-    opacity:0 ;
-    left:-960px;
+    opacity: 0;
+    left: -960px;
     z-index: 2;
   }
 }
@@ -456,13 +542,15 @@
   }
 }
 
-@keyframes animation-car1 { 
-  from, to {
+@keyframes animation-car1 {
+  from,
+  to {
     left: -253px;
     opacity: 0;
   }
-  
-  0%,1% {
+
+  0%,
+  1% {
     opacity: 1;
     left: -250px;
   }
@@ -477,15 +565,16 @@
     opacity: 0;
   }
 }
-  
 
 @keyframes animation-car2 {
-  from, to {
+  from,
+  to {
     left: -265px;
     opacity: 0;
   }
-  
-  0%,1% {
+
+  0%,
+  1% {
     opacity: 1;
     left: -265px;
   }
@@ -499,16 +588,17 @@
     left: 1750px;
     opacity: 0;
   }
-  
 }
 
 @keyframes animation-car3 {
-  from, to {
+  from,
+  to {
     left: -253px;
     opacity: 0;
   }
-  
-  0%,1% {
+
+  0%,
+  1% {
     opacity: 1;
     left: -250px;
   }
@@ -525,12 +615,14 @@
 }
 
 @keyframes animation-car4 {
-  from, to {
+  from,
+  to {
     left: -270px;
     opacity: 0;
   }
-  
-  0%,1% {
+
+  0%,
+  1% {
     opacity: 1;
     left: -250px;
   }
@@ -544,5 +636,4 @@
     left: 1550px;
     opacity: 0;
   }
-  
-  }
+}

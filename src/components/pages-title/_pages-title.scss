@@ -1,4 +1,4 @@
-.title {
+.page-title {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -9,8 +9,8 @@
   margin-bottom: 15px;
 
   @media (min-width:768px) and (max-width:810px) {
-    font-size: 40px;
-    line-height: 49px;
+    font-size: 36px;
+    line-height: 44px;
     margin-bottom: 10px;
   }  
 
@@ -20,3 +20,4 @@
     margin-bottom: 10px;
   } 
 }
+

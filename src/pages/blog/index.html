@@ -2,14 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Blog</title>
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <title> Blog page with the latest news in various spheres </title>
+    <meta name="description" content ="The last news in the world about finance, new development and discoveries for the week." >
+    <meta name="keywords" content="News, blog">    
     <link rel="stylesheet" href="/common.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <body>
     @@include('header/index.html')
@@ -18,88 +21,94 @@
         @@include('pages-title/index.html',{
           "text": "Blog"
         })
-        <div class="blog-breadcrumbs">
-          <ol class="breadcrumbs hidden-marker">
+        <div class="breadcrumbs">
+          <ol class="breadcrumbs__list hidden-marker">
             <li>
-              <a class="breadcrumbs__item" href="/index.html"> Home </a>
+              <a class="breadcrumb__item" href="/index.html"> Home </a>
             </li>
             <li>
-              <img class="breadcrumbs__item" src="/static/images/bread.svg" alt="&#62;">
+              <img class="breadcrumb__item" src="/static/images/bread.svg" alt="&#62;">
             </li>
-            <li class="breadcrumbs__item breadcrumbs__item_active"> Blog </li>
+            <li class="breadcrumb__item breadcrumb__item_active"> Blog </li>
           </ol>
         </div>
       </div>
       <section class="container">
         <h2 class="visually-hidden"> Last six blog-articles </h2>
-        <div class="blog-article">
-          <ul class="blog-list hidden-marker">
+        <div class="blog__article">
+          <ul class="blog__list hidden-marker">
             @@include('card-blog/index.html', {
               "imgName": "blog1.jpg",
               "date": "23rd August 2018",
               "title": "Top 5 fastest growing it service companies in philly",
-              "text": "Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence Award! This prestigious award is annually presented to the Top 1% of service providers in the given marketplace."
+              "text": "Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence Award! This prestigious award is annually presented to the Top 1% of service providers in the given marketplace.",
+              "alt": "constructor"
             })
             @@include('card-blog/index.html', {
               "imgName": "blog2.jpg",
               "date": "23rd August 2018",
               "title": "Best financial",
-              "text": "Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence Award! This prestigious award is annually presented to the Top 1% of service providers in the given marketplace."
+              "text": "Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence Award! This prestigious award is annually presented to the Top 1% of service providers in the given marketplace.",
+              "alt": "unicorn toy"              
             })
             @@include('card-blog/index.html', {
               "imgName": "blog3.jpg",
               "date": "23rd August 2018",
               "title": "Company logo or brand identity: which one is more important? brand identity",
-              "text": "To survive in the world of digital marketing, you need to keep up with the latest SEO trends. Here are our simple, but effective, SEO tips for small business success."
+              "text": "To survive in the world of digital marketing, you need to keep up with the latest SEO trends. Here are our simple, but effective, SEO tips for small business success.",
+              "alt": "different construction toys" 
             })
             @@include('card-blog/index.html', {
               "imgName": "blog4.jpg",
               "date": "23rd August 2018",
               "title": "Best financial",
-              "text": "Direct Line Development is honored to be recognized as one of the Top 100 Fastest Growing Companies 2019 in Philadelphia, according to Growjo’s ranking."
+              "text": "Direct Line Development is honored to be recognized as one of the Top 100 Fastest Growing Companies 2019 in Philadelphia, according to Growjo’s ranking.",
+              "alt": "cosmonaut toy" 
             })
             @@include('card-blog/index.html', {
               "imgName": "blog5.jpg",
               "date": "23rd August 2018",
               "title": "Company logo or brand identity: which one is more important? brand identity",
-              "text": "To survive in the world of digital marketing, you need to keep up with the latest SEO trends. Here are our simple, but effective, SEO tips for small business success."
+              "text": "To survive in the world of digital marketing, you need to keep up with the latest SEO trends. Here are our simple, but effective, SEO tips for small business success.",
+              "alt": "doll toy" 
             })
             @@include('card-blog/index.html', {
               "imgName": "blog6.jpg",
               "date": "23rd August 2018",
               "title": "Top 5 fastest growing it service companies in philly",
-              "text": "Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence Award! This prestigious award is annually presented to the Top 1% of service providers in the given marketplace."
+              "text": "Direct Line Development’s Team is excited to announce that we received UpCity’s 2019 Local Excellence Award! This prestigious award is annually presented to the Top 1% of service providers in the given marketplace.",
+              "alt": "toy diamonds" 
             })
           </ul>
         </div>
-        <div class="pages-block">
-          <button class="pages__button">
-            <svg class="pages__change_back"  width="19" height="28" fill="none" viewBox="0 0 18 29" stroke="#1E0606" stroke-width="4">
+        <div class="selector">
+          <button class="selector__button">
+            <svg class="selector__button_back"  width="19" height="28" fill="none" viewBox="0 0 18 29" stroke="#1E0606" stroke-width="4">
               <polyline points="2 2, 16 14, 2 26"  opacity= "0.12"/> 
             </svg>
           </button>
-          <div class="pages">
-            <ul class="hidden-marker pagination">
-              <li class="pages__list">
-                <a class="pages__item current" href="#">1
+          <div class="selector__pages-wrapper">
+            <ul class="hidden-marker selector__pages">
+              <li class="selector__pages-list">
+                <a class="selector__page-item selector__page-item_current" href="#">1
                 </a>
               </li>
-              <li class="pages__list">
-                <a class="pages__item" href="#">2
+              <li class="selector__pages-list">
+                <a class="selector__page-item" href="#">2
                 </a>
               </li>
-              <li class="pages__list">
-                <a class="pages__item" href="#">3
+              <li class="selector__pages-list">
+                <a class="selector__page-item" href="#">3
                 </a>
               </li>
-              <li class="pages__list">
-                <a class="pages__item" href="#">4
+              <li class="selector__pages-list">
+                <a class="selector__page-item" href="#">4
                 </a>
               </li>
             </ul>
           </div>
-          <button class="pages__button" >
-            <svg class="pages__change_next"width="19" height="28" fill="none" viewBox="0 0 18 29"  stroke-width="4" stroke="#1E0606" >
+          <button class="selector__button" >
+            <svg class="selector__button_next"width="19" height="28" fill="none" viewBox="0 0 18 29"  stroke-width="4" stroke="#1E0606" >
               <polyline   points="2 2, 16 14, 2 26"  opacity= "0.12" /> 
             </svg>
           </button>
@@ -107,5 +116,6 @@
       </section>
     </main>
     @@include('footer/index.html')
+    <script src="index.js"></script>
   </body>
   </html>

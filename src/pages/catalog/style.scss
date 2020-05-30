@@ -1,32 +1,96 @@
 /* product category */
-.category-container_mobile {
-  @media (min-width: 695px) and (max-width: 810px) {
-    padding: 0px;
-    margin: 0px;
+
+.category {
+
+  &__list-wrapper {
+    margin-top: 0px;
+    margin-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+  
+    @media (min-width: 695px) and (max-width: 810px) {
+      margin-left: -11px;
+      margin-right: -7px;
+    }
+  
+    @media (min-width: 0px) and (max-width: 694px) {
+      margin-left: -11px;
+      margin-right: -7px;
+    }
   }
 
-  @media (min-width: 0px) and (max-width: 694px) {
-    padding-left: -10px;
-    padding-right: -10px;
-    margin: 0px;
+  &__list {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
+
+  &__container_mobile {
+    @media (min-width: 695px) and (max-width: 810px) {
+      padding: 0px;
+      margin: 0px;
+    }
+  
+    @media (min-width: 0px) and (max-width: 694px) {
+      padding-left: -10px;
+      padding-right: -10px;
+      margin: 0px;
+    }
+  }
+
+  &__product-description {
+    width: 680px;
+    margin-left: 177px;
+    margin-bottom: 60px;
+  
+    @media (min-width: 695px) and (max-width: 1086px) {
+      margin-left: 0px;
+      width: 648px;
+    }
+  
+    @media (min-width: 0px) and (max-width: 694px) {
+      margin-left: 0px;
+      width: 335px;
+      flex-wrap: wrap;
+      display: flex;
+    }
+  }
+  
+  &__descriprion-text {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1e0606;
+    max-width: 680px;
+    margin-bottom: 16px;
+  
+  }
+  
+  &__description-title {
+    margin-bottom: 25px;
+    margin-top: 21px;
+    font-size: 38px;
+    line-height: 46px;
+  
+    @media (min-width: 695px) and (max-width: 810px) {
+      font-size: 36px;
+      line-height: 44px;
+    }
+  
+    @media (min-width: 0px) and (max-width: 694px) {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+  
+
 }
 
-.category-text {
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 32px;
-  text-transform: uppercase;
-  color: white;
-  position: absolute;
-  top: 133px;
-  left: 141px;
-  transform: translate(-50%, -50%);
-  align-items: center;
-  text-align: center;
-}
+
 
 .card-category_mr {
   margin-right: 20px;
@@ -47,92 +111,11 @@
 .card-category:nth-child(4) {
   margin-left: 195px;
 
-  @media (min-width: 0px) and (max-width: 1155px) {
-    margin-left: 0px;
+  @media (min-width: 0px) and (max-width: 1086px) {
+    /*margin-left: 0px;*/
+    margin-left: initial;
   }
+
 }
 
-.category-list {
-  margin-top: 0px;
-  margin-left: 0px;
-  display: flex;
-  flex-wrap: wrap;
 
-  @media (min-width: 695px) and (max-width: 810px) {
-    margin-left: -11px;
-    margin-right: -7px;
-  }
-
-  @media (min-width: 0px) and (max-width: 694px) {
-    margin-left: -11px;
-    margin-right: -7px;
-  }
-}
-
-.list {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
-/* section product descriptiom */
-
-.product-description {
-  width: 680px;
-  margin-left: 177px;
-  margin-bottom: 60px;
-
-  @media (min-width: 695px) and (max-width: 1160px) {
-    margin-left: 0px;
-    width: 648px;
-  }
-
-  @media (min-width: 0px) and (max-width: 694px) {
-    margin-left: 0px;
-    width: 335px;
-    flex-wrap: wrap;
-    display: flex;
-  }
-}
-
-.description {
-  margin-bottom: 25px;
-  margin-top: 21px;
-  font-size: 38px;
-  line-height: 46px;
-
-  @media (min-width: 695px) and (max-width: 810px) {
-    font-size: 36px;
-    line-height: 44px;
-  }
-
-  @media (min-width: 0px) and (max-width: 694px) {
-    font-size: 24px;
-    line-height: 29px;
-  }
-}
-
-.descriprion-text {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
-  color: #1e0606;
-  width: 680px;
-  margin-bottom: 16px;
-
-  @media (min-width: 565px) and (max-width: 810px) {
-    width: 648px;
-  }
-
-  @media (min-width: 0px) and (max-width: 564px) {
-    width: 335px;
-  }
-
-  @media (min-width: 0px) and (max-width: 320px) {
-    width: 315px;
-  }
-}

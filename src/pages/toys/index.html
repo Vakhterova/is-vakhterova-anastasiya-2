@@ -9,118 +9,120 @@
     <link rel="stylesheet" href="/common.css">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Toy for kids</title> 
+    <title>DLK Category product. Toys filter. </title> 
+    <meta name="description" content ="In toys category you can find information about every toy and choose the most appropriate for you in accordance with your request" >
+    <meta name="keywords" content="Toys,category,cost,color,delivery"> 
   </head>
   <body>
     @@include('header/index.html')
-    <main class="toy-page">
+    <main>
       @@include('pages-title/index.html',{
         "text": "Toy for kids",
         "class": "container"
       })
-      <div class="toy-breadcrumbs container">
-        <ol class="hidden-marker breadcrumbs">
+      <div class="breadcrumbs container">
+        <ol class="hidden-marker breadcrumbs__list">
           <li>
-            <a class="breadcrumbs__item" href="/index.html"> Home </a>
+            <a class="breadcrumb__item" href="/index.html"> Home </a>
           </li>
           <li>
-            <img class="breadcrumbs__item" src="/static/images/bread.svg" alt="&#62;">
+            <img class="breadcrumb__item" src="/static/images/bread.svg" alt="&#62;">
           </li>
           <li>
-            <a class="breadcrumbs__item" href="/pages/catalog/index.html"> Catalog </a>
+            <a class="breadcrumb__item" href="/pages/catalog/index.html"> Catalog </a>
           </li>
           <li>
-            <img class="breadcrumbs__item" src="/static/images/bread.svg" alt="&#62;">
+            <img class="breadcrumb__item" src="/static/images/bread.svg" alt="&#62;">
           </li>
-          <li class="breadcrumbs__item breadcrumbs__item_active">Toys </li>
+          <li class="breadcrumb__item breadcrumb__item_active">Toys </li>
         </ol>
       </div>
-      <section class="filters">
+      <section class="toys-filter">
         <h2 class="visually-hidden"> Product's filter </h2>
-        <div class="toys-form container">
-          <form class="filter-form" method="POST" action="https://form-data-dl.herokuapp.com/api/messages">
-            <div class="cost-filter">
-              <label class="filter-name" for="input-cost"> Cost </label>
-              <input name="cost" class="cost-line" id="input-cost" type="range" min="0" max="500" value="1">
-              <div class="cost-scroll">
-                <div class="scroll-up">0</div>
-                <div class="scroll-to">500</div>
+        <div class="toys-filter__form container">
+          <form class="toys-filter__filter-form" method="POST" action="https://form-data-dl.herokuapp.com/api/messages">
+            <div class="toys-filter__cost-filter">
+              <label class="toys-filter__filter-name" for="input-cost"> Cost </label>
+              <input name="cost" class="toys-filter__cost-line" id="input-cost" type="range" min="0" max="500" value="1">
+              <div class="toys-filter__cost-scroll">
+                <div class="toys-filter__cost-scroll_up">0</div>
+                <div class="toys-filter__cost-scroll_to">500</div>
               </div>
             </div>
-            <fieldset class="fieldset-color">
-              <legend class="filter-name"> Color </legend>
-              <ul class="marker hidden-marker">
-                <li class="color-item">
-                  <label class="filter-item">
-                    <input class="filter-item visually-hidden" name="black" type="checkbox">
-                    <span class="filter-item__indicator"> </span>
-                    <span class="filter-item__text"> Black </span> 
+            <fieldset class="toys-filter__color-filter">
+              <legend class="toys-filter__filter-name"> Color </legend>
+              <ul class="toys-filter__filter-list hidden-marker">
+                <li class="toys-filter__filter-element-color_mb">
+                  <label class="toys-filter__filter-item">
+                    <input class="toys-filter__filter-item visually-hidden" name="black" type="checkbox">
+                    <span class="toys-filter__filter-item-indicator"> </span>
+                    <span class="toys-filter__filter-item-text"> Black </span> 
                   </label>
                 </li>
-                <li class="color-item">
-                  <label class="filter-item">
-                    <input class="filter-item visually-hidden" name="blue" type="checkbox">
-                    <span class="filter-item__indicator"></span>
-                    <span class="filter-item__text"> Blue </span>  
+                <li class="toys-filter__filter-element-color_mb">
+                  <label class="toys-filter__filter-item">
+                    <input class="toys-filter__filter-item visually-hidden" name="blue" type="checkbox">
+                    <span class="toys-filter__filter-item-indicator"></span>
+                    <span class="toys-filter__filter-item-text"> Blue </span>  
                   </label>
                 </li>
-                <li class="color-item">
-                  <label class="filter-item">
-                    <input class="filter-item visually-hidden" name="green" type="checkbox">
-                    <span class="filter-item__indicator"></span>
-                    <span class="filter-item__text"> Green </span>                
+                <li class="toys-filter__filter-element-color_mb">
+                  <label class="toys-filter__filter-item">
+                    <input class="toys-filter__filter-item visually-hidden" name="green" type="checkbox">
+                    <span class="toys-filter__filter-item-indicator"></span>
+                    <span class="toys-filter__filter-item-text"> Green </span>                
                   </label>
                 </li>
-                <li class="color-item">
-                  <label class="filter-item">
-                    <input class="filter-item visually-hidden" name="white" type="checkbox">
-                    <span class="filter-item__indicator"></span>
-                    <span class="filter-item__text"> White </span> 
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="fieldset-delivery">
-              <legend class="filter-name"> Delivery </legend>
-              <ul class="marker hidden-marker">
-                <li class="delivery-item">
-                  <label class="filter-item">
-                    <input class="form-radio filter-item visually-hidden" name="delivery" type="radio">
-                    <span class="filter-delivery__indicator"></span>
-                    <span class="filter-item__text"> Free shipping </span>                  
-                  </label>
-                </li>
-                <li class="delivery-item">
-                  <label class="filter-item">
-                    <input class="form-radio filter-item visually-hidden" name="delivery" type="radio">
-                    <span class="filter-delivery__indicator"></span>
-                    <span class="filter-item__text"> Fast shipping </span>  
+                <li class="toys-filter__filter-element-color_mb">
+                  <label class="toys-filter__filter-item">
+                    <input class="toys-filter__filter-item visually-hidden" name="white" type="checkbox">
+                    <span class="toys-filter__filter-item-indicator"></span>
+                    <span class="toys-filter__filter-item-text"> White </span> 
                   </label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="fieldset-amount">
-              <legend class="filter-name filter-name_mb">Amount</legend>
-              <ul class="range-list hidden-marker ">
-                <li class="amount-button ">
-                  <label class="hide-radio">
-                    <input class="amount visually-hidden hide-radio" name="indicator" type="radio">
-                    <span class="filter-amount__indicator"> </span>
-                    <span class="filter-amount__text" >  0-5 </span>
+            <fieldset class="toys-filter__delivery-filter">
+              <legend class="toys-filter__filter-name"> Delivery </legend>
+              <ul class="toys-filter__filter-list hidden-marker">
+                <li class="toys-filter__filter-element-delivery_mb">
+                  <label class="toys-filter__filter-item">
+                    <input class="toys-filter__filter-item visually-hidden" name="delivery" type="radio">
+                    <span class="toys-filter__filter-delivery-indicator"></span>
+                    <span class="toys-filter__filter-item-text"> Free shipping </span>                  
                   </label>
                 </li>
-                <li class="amount-button">
-                  <label class="hide-radio">
-                    <input class="amount visually-hidden hide-radio" name="indicator" type="radio">
-                    <span class="filter-amount__indicator"></span>
-                    <span class="filter-amount__text">  10-20 </span>
+                <li class="toys-filter__filter-element-delivery_mb">
+                  <label class="toys-filter__filter-item">
+                    <input class="form-radio toys-filter__filter-item visually-hidden" name="delivery" type="radio">
+                    <span class="toys-filter__filter-delivery-indicator"></span>
+                    <span class="toys-filter__filter-item-text"> Fast shipping </span>  
                   </label>
                 </li>
-                <li class="amount-button">
-                  <label class="hide-radio">
-                    <input class="amount visually-hidden hide-radio" name="indicator" type="radio">
-                    <span class="filter-amount__indicator"></span>
-                    <span class="filter-amount__text"> 20-50 </span>  
+              </ul>
+            </fieldset>
+            <fieldset class="toys-filter__amount-filter">
+              <legend class="toys-filter__filter-name toys-filter__filter-name_mb">Amount</legend>
+              <ul class="toys-filter__range-list hidden-marker ">
+                <li>
+                  <label class="toys-filter__radio-item">
+                    <input class="toys-filter__radio-item-amount visually-hidden" name="indicator" type="radio">
+                    <span class="toys-filter__filter-amount-indicator"> </span>
+                    <span class="toys-filter__filter-amount-text" >  0-5 </span>
+                  </label>
+                </li>
+                <li>
+                  <label class="toys-filter__radio-item">
+                    <input class="toys-filter__radio-item-amount visually-hidden" name="indicator" type="radio">
+                    <span class="toys-filter__filter-amount-indicator"></span>
+                    <span class="toys-filter__filter-amount-text">  10-20 </span>
+                  </label>
+                </li>
+                <li>
+                  <label class="toys-filter__radio-item">
+                    <input class="toys-filter__radio-item-amount visually-hidden" name="indicator" type="radio">
+                    <span class="toys-filter__filter-amount-indicator"></span>
+                    <span class="toys-filter__filter-amount-text"> 20-50 </span>  
                   </label>
                 </li>
               </ul>
@@ -166,39 +168,40 @@
           })
         </ul>
       </div>
-      <div class="pages-block container">
-        <button class="pages__button">
-          <svg class="pages__change_back"  width="19" height="28" fill="none" viewBox="0 0 18 29" stroke="#1E0606" stroke-width="4">
+      <div class="selector container">
+        <button class="selector__button">
+          <svg class="selector__button_back"  width="19" height="28" fill="none" viewBox="0 0 18 29" stroke="#1E0606" stroke-width="4">
             <polyline points="2 2, 16 14, 2 26"  opacity= "0.12"/> 
           </svg>
         </button>
-        <div class="pages">
-          <ul class="hidden-marker pagination">
-            <li class="pages__list">
-              <a class="pages__item current" href="#">1
+        <div class="selector__pages-wrapper">
+          <ul class="hidden-marker selector__pages">
+            <li class="selector__pages-list">
+              <a class="selector__page-item selector__page-item_current" href="#">1
               </a>
             </li>
-            <li class="pages__list">
-              <a class="pages__item" href="#">2
+            <li class="selector__pages-list">
+              <a class="selector__page-item" href="#">2
               </a>
             </li>
-            <li class="pages__list">
-              <a class="pages__item" href="#">3
+            <li class="selector__pages-list">
+              <a class="selector__page-item" href="#">3
               </a>
             </li>
-            <li class="pages__list">
-              <a class="pages__item" href="#">4
+            <li class="selector__pages-list">
+              <a class="selector__page-item" href="#">4
               </a>
             </li>
           </ul>
         </div>
-        <button class="pages__button" >
-          <svg class="pages__change_next"width="19" height="28" fill="none" viewBox="0 0 18 29"  stroke-width="4" stroke="#1E0606" >
+        <button class="selector__button" >
+          <svg class="selector__button_next"width="19" height="28" fill="none" viewBox="0 0 18 29"  stroke-width="4" stroke="#1E0606" >
             <polyline   points="2 2, 16 14, 2 26"  opacity= "0.12" /> 
           </svg>
         </button>
       </div>
     </main>
     @@include('footer/index.html')
+    <script src="index.js"></script>   
   </body>
   </html>

@@ -7,10 +7,13 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="/common.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> DLK's main category products with product description </title>
+    <meta name="description" content ="We offer to our customers the best list of products in accordance with catalog, included the following categoriy's goods:Apparel kids, Holiday shop,Toys,Accessories,Sale,Apparel adults" >
+    <meta name="keywords" content="Catalog. Apparel kids.Holiday shop.Toys.Accessories.Sale.Apparel adults">    
   </head>
   <body>
     @@include('header/index.html')
@@ -18,39 +21,39 @@
       @@include('pages-title/index.html',{
         "text": "Category Products"
       })
-      <div class="products-breadcrumbs">
-        <ol class="breadcrumbs hidden-marker ">
+      <div class="breadcrumbs">
+        <ol class="breadcrumbs__list hidden-marker ">
           <li>
-            <a class="breadcrumbs__item" href="/index.html"> Home </a>
+            <a class="breadcrumb__item" href="/index.html"> Home </a>
           </li>
           <li>
-            <img class="breadcrumbs__item" src="/static/images/bread.svg" alt="&#62;">
+            <img class="breadcrumb__item" src="/static/images/bread.svg" alt="&#62;">
           </li>
-          <li class="breadcrumbs__item breadcrumbs__item_active">Catalog </li>
+          <li class="breadcrumb__item breadcrumb__item_active">Catalog </li>
         </ol>
       </div>
       <section class="category">
         <h2 class="visually-hidden"> Category Products </h2>
-        <div class="category-container_mobile">
-          <div class="category-list">
-            <ul class="list hidden-marker">
+        <div class="category__container_mobile">
+          <div class="category__list-wrapper">
+            <ul class="category__list hidden-marker">
               @@include('card-category/index.html',{
                 "text": "Apparel kids",
-                "imgName": "category-1.jpg",
+                "imgName": "category1.jpg",
                 "class": "card-category_mr",
                 "class2": "card-category__img_size",
                 "class3": "card-category__category_text"
               })
               @@include('card-category/index.html',{
                 "text": "Holiday shop",
-                "imgName": "category-2.jpg",
+                "imgName": "category2.jpg",
                 "class": "card-category_mr",
                 "class2": "card-category__img_size",
                 "class3": "card-category__category_text"
               })
               @@include('card-category/index.html',{
                 "text": "Toys",
-                "imgName": "category-3.jpg",
+                "imgName": "category3.jpg",
                 "class": "card-category_mr",
                 "link": "/pages/toys/index.html",
                 "class2": "card-category__img_size",
@@ -58,21 +61,21 @@
               })
               @@include('card-category/index.html',{
                 "text": "Accessories",
-                "imgName": "category-4.jpg",
+                "imgName": "category4.jpg",
                 "class": "card-category_mr",
                 "class2": "card-category__img_size",
                 "class3": "card-category__category_text"
               })
               @@include('card-category/index.html',{
                 "text": "Sale",
-                "imgName": "category-5.jpg",
+                "imgName": "category5.jpg",
                 "class": "card-category_mr",
                 "class2": "card-category__img_size",
                 "class3": "card-category__category_text"
               })
               @@include('card-category/index.html',{
                 "text": "Apparel adults",
-                "imgName": "category-6.jpg",
+                "imgName": "category6.jpg",
                 "class": "card-category_mr",
                 "class2": "card-category__img_size",
                 "class3": "card-category__category_text"
@@ -80,20 +83,20 @@
             </ul>
           </div>
         </div>
-        <div class="product-description">
+        <div class="category__product-description">
           @@include('pages-title/index.html',{
             "text": "Product Description",
-            "class": "description"
+            "class": "category__description-title"
           })
-          <div class="descriprion-text">
+          <div class="category__descriprion-text">
             Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and almost really cry. You can even
             bathe her, just like a little sister.
           </div>
-          <div class="descriprion-text">
+          <div class="category__descriprion-text">
             A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an
             excellent choice for a gift for a girl from 4 years old.
           </div>
-          <div class="descriprion-text">
+          <div class="category__descriprion-text">
             The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins
             and
             elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.
@@ -102,5 +105,6 @@
       </section>
     </main>
     @@include('footer/index.html')
+    <script src="index.js"></script>
   </body>
   </html>

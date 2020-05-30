@@ -16,4 +16,13 @@
 
 .svg {
   margin-bottom: 25px;
+
+
+  &__content {
+    @media (min-width: 0px) and (max-width: 451px) {
+      width: 320px;
+
+    }
+  }
 }
+

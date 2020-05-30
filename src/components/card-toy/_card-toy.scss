@@ -1,8 +1,4 @@
-.price {
-  margin-bottom: 25px;
-}
-
-.card-toy {
+.toys__card {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +12,7 @@
     margin-left: 0px;
   }
 
-  &_description {
+  &-description {
     font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -44,7 +40,11 @@
     }
   }
 
-  &_price {
+  &-price-wrapper{
+    margin-bottom: 25px;
+  }
+  
+  &-price {
     font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -58,7 +58,7 @@
     }
   }
 
-  &_learn-more {
+  &-link-learn {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -75,14 +75,14 @@
     top: 88px;
     left: 87px;
     width: 207px;
-    height: 207px;
+    min-height: 207px;
     background-color: #e5eaf8;
 
     @media (min-width: 692px) and (max-width: 882px) {
       top: 43px;
       left: 42px;
-      width: 129px;
-      height: 129px;
+      max-width: 129px;
+      min-height: 129px;
       text-align: center;
       font-size: 18px;
       line-height: 22px;
@@ -91,30 +91,16 @@
     @media (min-width: 0px) and (max-width: 691px) {
       top: 32px;
       left: 31px;
-      width: 100px;
-      height: 100px;
+      max-width: 100px;
+      min-height: 100px;
       text-align: center;
       font-size: 13px;
       line-height: 20px;
     }
   }
 
-  &_link {
-    outline: none;
-  }
 
-  &_link:hover &_learn-more,
-  .card-toy_link:focus .card-toy_learn-more {
-    opacity: 0.9;
-    cursor: pointer;
-  }
-
-  &_link:active &_learn-more {
-    opacity: 0.67;
-    cursor: pointer;
-  }
-
-  &_img {
+  &-img {
     @media (min-width: 692px) and (max-width: 882px) {
       width: 203px;
       height: 211px;
@@ -124,4 +110,18 @@
       height: 167px;
     }
   }
+}
+
+.toys__card-link {
+  outline: none;
+}
+
+.toys__card-link:hover .toys__card-link-learn, .toys__card-link:focus .toys__card-link-learn {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.toys__card-link:active .toys__card-link-learn {
+  opacity: 0.67;
+  cursor: pointer;
 }

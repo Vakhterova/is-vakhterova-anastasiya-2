@@ -11,7 +11,8 @@ html {
 }
 
 *,
-*::before,*::after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -55,57 +56,66 @@ html {
 
 /* breadcrums */
 
-.breadcrumbs {
+
+.breadcrumbs  {
   display: flex;
   align-items: center;
-  margin-bottom: 0px;
+  margin-bottom: 50px;
   margin-top: 0px;
 
-  &__item {
-    font-family: "Crimson Text", serif;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 25px;
-    color: #1e0606;
-    margin-right: 20px;
-    margin-bottom: 46px;
-    display: flex;
-    align-items: center;
-
-    @media (min-width: 0px) and (max-width: 767px) {
-      font-size: 16px;
-      line-height: 20px;
-      margin-bottom: 20px;
-    }
-
-    @media (min-width: 768px) and (max-width: 810px) {
-      margin-bottom: 30px;
-    }
+  @media (min-width: 0px) and (max-width: 767px) {
+    margin-bottom: 30px;
   }
 
-  &__item_active {
+  @media (min-width: 0px) and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+
+  &__list{
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+  }
+
+}
+
+.breadcrumb__item {
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  color: #1e0606;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: 0px) and (max-width: 767px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &_active {
     opacity: 0.5;
   }
 }
 
+
+
+
 /* порядок страниц */
-.pages-block {
+
+.selector {
   display: flex;
   justify-content: space-between;
   margin-bottom: 48px;
-}
 
-.pagination {
-  display: flex;
-  margin-left: 64px;
-}
+  &__pages {
+    display: flex;
+    margin-left: 64px;
+  }
 
-.pages {
-  display: flex;
-  justify-content: center;
-
-  &__list {
+  &__pages-list {
     margin-right: 65px;
 
     @media (min-width: 0px) and (max-width: 694px) {
@@ -113,7 +123,13 @@ html {
     }
   }
 
-  &__item {
+  &__pages-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: -11px;
+  }
+
+  &__page-item {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -123,7 +139,7 @@ html {
     color: #1e0606;
     transition: opacity 0.4s;
 
-    &:hover,    &:focus {
+    &:hover, &:focus {
       opacity: 0.5;
     }
 
@@ -132,11 +148,11 @@ html {
     }
   }
 
-  &__change_back {
+  &__button_back {
     transform: matrix(-1, 0, 0, 1, 0, 0);
     transition: stroke 0.4s;
 
-    & > polyline:hover:hover,    & > polyline:hover:focus {
+    & > polyline:hover:hover,  & > polyline:hover:focus {
       stroke: #c29974;
       cursor: pointer;
       opacity: 1;
@@ -151,50 +167,44 @@ html {
       outline: none;
     }
   }
-}
 
-.current {
-  color: #c29974;
-}
 
-.pages__change_next {
-  transition: stroke 0.4s;
-
-  & > polyline:hover {
-    stroke: #c29974;
-    cursor: pointer;
-    opacity: 1;
+  &__page-item_current {
+    color: #c29974;
   }
 
-  & > polyline:focus {
-    stroke: #c29974;
-    cursor: pointer;
-    opacity: 0.5;
+  &__button_next {
+    transition: stroke 0.4s;
+
+    & > polyline:hover, & > polyline:focus {
+      stroke: #c29974;
+      cursor: pointer;
+      opacity: 1;
+    }
+
+    &:active {
+      stroke: #c29974;
+      opacity: 0.5;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__button {
+    background-color: #fff;
+    border: none;
+    width: 19px;
+    height: 29px;
+    padding: 0px;
+
+    &:hover, &:focus {
     outline: none;
   }
-
-  &:active {
-    stroke: #c29974;
-    opacity: 0.5;
-  }
-
-  &:focus {
-    outline: none;
   }
 }
 
-.pages__button {
-  background-color: #fff;
-  border: none;
-  width: 19px;
-  height: 29px;
-  padding: 0px;
-
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-}
 
 // Подключение компонентов
 @import "./header/header";

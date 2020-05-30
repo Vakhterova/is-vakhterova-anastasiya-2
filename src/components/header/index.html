@@ -1,80 +1,77 @@
 <header class="header container">
-    <a class="header-logo" href="/index.html">
-      <img class="logo" src="/static/images/logo.jpg" alt="logo">
+    <a class="header__logo-wrapper" href="/index.html">
+      <img class="header__logo-img" src="/static/images/logo.jpg" alt="logo">
     </a>
-    <button class="header-item__menu header__menu_js"> MENU </button>
-    <nav class="header-nav">
-      <ul class="hidden-marker header-nav__list ">
+    <button class="header__button-menu  header__menu_js"> MENU </button>
+    <div class="header__mobile-wrapper-close header__mobile-close-btn_none  header__mobile-close_js"> 
+      <img class="header__X-img" src="/static/images/x1.svg" alt="X">       
+    </div>
+    <nav class="header__nav-wrapper">
+      <ul class="hidden-marker header__nav-links ">
         <li>
-          <a class="nav__item" href="/pages/blog/index.html"> blog </a>
+          <a class="header__nav-link" href="/pages/blog/index.html"> blog </a>
         </li>
         <li>
-          <a class="nav__item" href="/pages/catalog/index.html"> catalog </a>
+          <a class="header__nav-link" href="/pages/catalog/index.html"> catalog </a>
         </li>
         <li>
-          <a class="nav__item" href="#"> about Us </a>
+          <a class="header__nav-link" href="#"> about Us </a>
         </li>
         <li> 
-          <a class="nav__item" href="/pages/animation/index.html"> animation </a>
+          <a class="header__nav-link" href="/pages/animation/index.html"> animation </a>
         </li>
         <li> 
-          <a class="nav__item" href="/pages/svg/index.html"> svg </a>
+          <a class="header__nav-link" href="/pages/svg/index.html"> svg </a>
         </li>
         <li> 
-          <a class="nav__item" href="/pages/grid/index.html"> grid </a>
+          <a class="header__nav-link" href="/pages/grid/index.html"> grid </a>
         </li>
       </ul>
-      <ul class="hidden-marker header-nav__contact">
-        <li>
-          <button class="search-button header-item__seacrh">
-            <img class="search-img" src="/static/images/search.svg" alt="search" width="24" height="24">
+      <ul class="hidden-marker header__nav-wrapper-search">
+        <li>      
+          <button class="header__button-search">
+            <picture>
+              <source srcset="/static/images/search.mobile.svg"  media="(min-width:0px) and (max-width:375px)">       
+                <img class="header__search-img" src="/static/images/search.svg" alt="search">
+            </picture>
           </button>
         </li>
         <li>
-          <a class="nav__item header-item__contact" href="/pages/contact/index.html"> Contact Us </a>
+          <a class="header__nav-link header__link-contact" href="/pages/contact/index.html"> Contact Us </a>
         </li>
       </ul>
     </nav>
 
-<!-- header for mobile/ipad
 
-    <div class="mobile-header mobile-header_js mobile-header_none">
-      <div class="mobile-header__main"> 
-        <a class="mobile-header__logo" href="/index.html">
-          <img class="logo" src="/static/images/logo.jpg" alt="logo">
-        </a>
-        <div class="mobile-header__close-btn mobile-header__close_js"> 
-          <img class="X-img" src="/static/images/x1.svg" alt="X">       
-        </div>
-        <button class="search-button mobile-header__seacrh">
-            <img class="mobile-header__seacrh_img" src="/static/images/search.svg" alt="search">
-        </button>
+
+    <div class="header__mobile header__mobile_js header__mobile_hidden">
+      <div class="header__mobile-wrapper">
+        <nav class="header__mobile-nav ">
+          <ul class="hidden-marker header__mobile-nav-list">
+            <li class="header__mobile-nav-item">
+              <a class="header__mobile-nav-link" href="/pages/blog/index.html"> blog </a>
+            </li>
+            <li class="header__mobile-nav-item">
+              <a class="header__mobile-nav-link" href="/pages/catalog/index.html"> catalog </a>
+            </li>
+            <li class="header__mobile-nav-item">
+              <a class="header__mobile-nav-link" href="#"> about Us </a>
+            </li>
+            <li class="header__mobile-nav-item">
+              <a class="header__mobile-nav-link" href="/pages/animation/index.html"> animation </a>
+            </li>
+            <li class="header__mobile-nav-item">
+              <a class="header__mobile-nav-link" href="/pages/svg/index.html"> svg </a>
+            </li>
+            <li class="header__mobile-nav-item header__mobile-nav-item_mb">
+              <a class="header__mobile-nav-link" href="/pages/grid/index.html"> grid </a>
+            </li>
+            <li class="header__mobile-nav-item ">
+              <a class="header__mobile-nav-link header__mobile-nav-link_bold" href="/pages/contact/index.html"> Contact Us </a>
+            </li>
+          </ul>
       </div>
-      <nav class="mobile-header__nav">
-        <ul class="hidden-marker mobile-header__list ">
-          <li>
-            <a class="mobile-header__item" href="/pages/blog/index.html"> blog </a>
-          </li>
-          <li>
-            <a class="mobile-header__item" href="/pages/catalog/index.html"> catalog </a>
-          </li>
-          <li>
-            <a class="mobile-header__item" href="#"> about Us </a>
-          </li>
-          <li> 
-            <a class="mobile-header__item" href="/pages/animation/index.html"> animation </a>
-          </li>
-          <li> 
-            <a class="mobile-header__item" href="/pages/svg/index.html"> svg </a>
-          </li>
-          <li> 
-            <a class="mobile-header__item" href="/pages/grid/index.html"> grid </a>
-          </li>
-          <li>
-            <a class="mobile-header__item mobile-header__item_contact" href="/pages/contact/index.html"> Contact Us </a>
-          </li>
-        </ul>
     </div>
--->
+
 
 </header>

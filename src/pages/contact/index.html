@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Contact us. Send us a message and we'll respond </title>
+  <meta name="description" content ="Our support team are on-hand to assist with any issues you are experiencing." >
+  <meta name="keywords" content="Contact, Help">    
   <link rel="stylesheet" href="/common.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -17,44 +20,45 @@
   @@include('header/index.html')
   <main class="main-contact container">
     @@include('pages-title/index.html',{
-      "text": "Contact us"
+      "text": "Contact us",
+      "class": "contact__title"
     })
-    <div class="contact-breadcrumbs">
-      <ol class="breadcrumbs hidden-marker">
+    <div class="breadcrumbs breadcrumbs__contact">
+      <ol class="breadcrumbs__list hidden-marker">
         <li>
-          <a class="breadcrumbs__item" href="/index.html"> Home </a>
+          <a class="breadcrumb__item" href="/index.html"> Home </a>
         </li>
         <li>
-          <img class="breadcrumbs__item" src="/static/images/bread.svg" alt="&#62;">
+          <img class="breadcrumb__item" src="/static/images/bread.svg" alt="&#62;">
         </li>
-        <li class="breadcrumbs__item breadcrumbs__item_active">Contact Us </li>
+        <li class="breadcrumb__item breadcrumb__item_active">Contact Us </li>
       </ol>
     </div>
     <div class="contact">
-      <div class="contact-form">
+      <div class="contact__form">
         @@include('modal-window/index.html', {
           "class1": "modal-window__mb_60"
         })
           @@include('button/index.html',{
-            "text": "Submit",
-            "class": "modal-form-button"
+            "text": "Submit"
         })
         </form>
       </div>
-      <section class="contact-text">
+      <section class="contact__text-wrapper">
         <h2 class="visually-hidden"> Contact us</h2>
-        <p class="contactUs-text">
+        <p class="contact__text">
           Our support team are on-hand to assist with any issues you are experiencing.
         </p>
-        <p class="contactUs-text">
+        <p class="contact__text">
           Please use the form to contact us with your needs. Send us a message and we'll respond as soon as possible.
         </p>
-        <div class="help-text">
+        <div class="contact__help-text">
           An expert is waiting to help you!
         </div>
       </section>
     </div>
   </main>
   @@include('footer/index.html')
+  <script src="index.js"></script>
 </body>
 </html>

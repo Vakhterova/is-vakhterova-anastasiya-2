@@ -67,16 +67,15 @@
   }
 
   &-content {
-    background-color: #434343;
-    width: 1400px;
+    padding-bottom: 100px;
+
 
     @media (min-width: 768px) and (max-width: 1201px) {
-      max-width: 1201px;
-      min-height: 564px;
+      padding-bottom: 80px;
     }
 
     @media (min-width: 0px) and (max-width: 767px) {
-      max-width: 767px;
+      padding-bottom: 70px;
       display: flex;
       flex-direction: column;
     }
@@ -109,16 +108,16 @@
 
   &-line_bottom {
     border: 1px solid #666666;
-    width: 1180px;
+    max-width: 1180px;
     margin-bottom: 24px;
 
     @media (min-width: 768px) and (max-width: 1201px) {
-      width: 648px;
+      max-width: 648px;
       margin-left: 0px;
     }
     @media (min-width: 0px) and (max-width: 767px) {
       display: none;
-      width: initial;
+      max-width: initial;
     }
   }
 
@@ -157,11 +156,11 @@
   }
 
   &-button {
-    height: 40px;
-    width: 81px;
+    min-height: 40px;
+    max-width: 81px;
     @media (min-width: 0px) and (max-width: 767px) {
       display: none;
-      width: initial;
+      max-width: initial;
     }
   }
 }
@@ -234,7 +233,7 @@
 
 .input-email__form {
   width: 299px;
-  height: 40px;
+  min-height: 40px;
   background-color: #666666;
   border: 1px solid #666666;
   box-sizing: border-box;
@@ -290,7 +289,6 @@ input[placeholder="Email"] {
 
 .footer-information__general {
   display: flex;
-  padding-bottom: 100px;
 
   @media (min-width: 768px) and (max-width: 1201px) {
     display: initial;
@@ -307,7 +305,6 @@ input[placeholder="Email"] {
 
   @media (min-width: 768px) and (max-width: 1201px) {
     margin-top: 15px;
-    margin-bottom: 80px;
   }
 
   @media (min-width: 0px) and (max-width: 767px) {
@@ -544,8 +541,7 @@ input[placeholder="Email"] {
       display: initial;
     }
 
-    &:hover,
-    &:focus {
+    &:hover,    &:focus {
       display: none;
       @media (min-width: 0px) and (max-width: 767px) {
         opacity: 0.5;
@@ -576,7 +572,7 @@ input[placeholder="Email"] {
 
     @media (min-width: 0px) and (max-width: 767px) {
       background-color: #434343;
-      width: 1400px;
+      max-width: 1400px;
       display: initial;
     }
 
@@ -657,8 +653,8 @@ input[placeholder="Email"] {
     display: none;
 
     @media (min-width: 0px) and (max-width: 767px) {
-      height: 39px;
-      width: 72px;
+      min-height: 39px;
+      max-width: 72px;
       display: initial;
     }
   }
@@ -681,6 +677,8 @@ input[placeholder="Email"] {
     display: flex;
     align-items: flex-start;
     display: initial;
+    margin-top: 25px;
+    margin-bottom: 60px;
   }
 }
 
@@ -738,8 +736,8 @@ input[placeholder="Email"] {
 
   @media (min-width: 0px) and (max-width: 767px) {
     display: initial;
-    width: 263px;
-    height: 38px;
+    max-width: 263px;
+    min-height: 38px;
     background-color: #666666;
     border: 1px solid #666666;
     box-sizing: border-box;
@@ -781,7 +779,6 @@ input[placeholder="Email"] {
     display: initial;
     display: flex;
     flex-direction: column;
-    padding-bottom: 70px;
     margin-left: 21px;
   }
 }

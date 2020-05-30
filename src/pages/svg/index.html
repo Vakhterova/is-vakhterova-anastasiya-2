@@ -2,27 +2,34 @@
 <html lang="en">
   <head>
     <meta charset=UTF-8>
-    <title>SVG</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400i,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/common.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SVG page </title> 
+    <meta name="description" content ="The page with svg image that shows the screen of developer" >
+    <meta name="keywords" content="SVG"> 
   </head>
   <body>
     @@include('header/index.html')
     <main class="container">
       <h1 class="svg-title"> SVG animation </h1>
-      <div class="svg-breadcrumbs">
-        <ol class="breadcrumbs hidden-marker">
+      <div class="breadcrumbs">
+        <ol class="breadcrumbs__list hidden-marker">
           <li>
-            <a class="breadcrumbs__item" href="/index.html"> Home </a>
+            <a class="breadcrumb__item" href="/index.html"> Home </a>
           </li>
           <li>
-            <img class="breadcrumbs__item" src="/static/images/bread.svg" alt="&#62;">
+            <img class="breadcrumb__item" src="/static/images/bread.svg" alt="&#62;">
           </li>
-          <li class="breadcrumbs__item breadcrumbs__item_active"> SVG </li>
+          <li class="breadcrumb__item breadcrumb__item_active"> SVG </li>
         </ol>
       </div>
       <div class="svg">  
-        <svg width="418" height="381" viewBox="0 0 418 381" fill="none">
+        <svg class="svg__content" width="418" height="381" viewBox="0 0 418 381" fill="none">
           <path fill="#CCD1D9" d=" M 15 0 C 5.5 0, 0 5, 0 15 
           L 0 27 L 418 27 L 418 15 
           C 418 5.5, 412.5 0, 403 0 "/> 
@@ -70,6 +77,7 @@
       </div>
     </main>
     @@include('footer/index.html')
+    <script src="index.js"></script>   
   </body>
 
 </html>
